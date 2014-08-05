@@ -21,4 +21,12 @@ feature "Creating Posts" do
 		expect(page).to have_content("Post has not been created.")
 		expect(page).to have_content("Title can't be blank")
 	end
+
+	scenario "can not create a post without content" do
+		fill_in 'Title', with: 'Example Post'
+		click_button "Create Post"
+
+		expect(page).to have_content("Post has not been created.")
+		expect(page).to have_content("Content can't be blank")
+	end
 end
