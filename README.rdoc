@@ -1,28 +1,11 @@
-== README
+== Chaya Mushka Children's House
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Chaya Mushka Children's House is a preschool & dayschool in Atlanta, GA seeking to create a stimulating and enriching educational environment for each and every child. The school is devoted to helping children learn socialization skills, building their self-confidence and teaching them the preliminary skills to explore andexperience the world independently.
 
-Things you may want to cover:
+Ruby version: 2.1.2
 
-* Ruby version
+Rails version 4.1.2
 
-* System dependencies
+See Gemfile for additional dependencies.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+We are creating a website for a preschool that believes in its students and will do anything and everything to help enrich their lives. WE ARE DOING GOOD :)
