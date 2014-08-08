@@ -3,8 +3,9 @@ require 'spec_helper'
 feature "Creating Posts" do
 
 	before do
-		visit '/'
-		click_link 'New Post'
+		sign_in_as!(create(:faculty_user))
+
+		click_link "New Post"
 	end
 
 	scenario "can create a post" do
@@ -13,6 +14,10 @@ feature "Creating Posts" do
 		click_button 'Create Post'
 
 		expect(page).to have_content("Post has been created.")
+
+		within "#post #author" do
+			expect(page).to have_content("Created by sample@example.com")
+		end
 	end
 
 	scenario "can not create a post without a name" do

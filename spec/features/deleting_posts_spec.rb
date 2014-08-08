@@ -1,11 +1,17 @@
 require 'spec_helper'
 
 feature "Deleting Posts" do
-	scenario "Deleting a post" do
-		create(:post, title: "Example Post")
 
+	let!(:faculty_user) { create(:faculty_user) }
+	let!(:post) { create(:post, user: faculty_user) }
+
+	before do
+		sign_in_as!(faculty_user)
 		visit '/'
 		click_link "Example Post"
+	end
+
+	scenario "Deleting a post" do
 		click_link "Delete Post"
 
 		expect(page).to have_content("Post has been deleted.")
