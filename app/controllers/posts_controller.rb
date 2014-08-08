@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
+	before_action :authorize_faculty!, except: [:index, :show]
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
-	before_action :require_signin!, except: [:show, :index]
 
 	def index
 		@posts = Post.all
@@ -47,6 +47,17 @@ class PostsController < ApplicationController
 	end
 
 	private
+
+	def authorize_faculty!
+		require_signin!
+
+		if current_user.nil? == false
+			unless current_user.faculty?
+				flash[:alert] = "You must be faculty to do that."
+				redirect_to root_path
+			end
+		end
+	end
 
 	def require_signin!
 		if current_user.nil?

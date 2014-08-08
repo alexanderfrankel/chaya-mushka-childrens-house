@@ -2,11 +2,11 @@ require 'spec_helper'
 
 feature "Deleting Posts" do
 
-	let!(:user) { create(:user) }
-	let!(:post) { create(:post, user: user) }
+	let!(:faculty_user) { create(:faculty_user) }
+	let!(:post) { create(:post, user: faculty_user) }
 
 	before do
-		sign_in_as!(user)
+		sign_in_as!(faculty_user)
 		visit '/'
 		click_link "Example Post"
 	end

@@ -2,15 +2,15 @@ require 'spec_helper'
 
 feature "Editing Posts" do
 
-	let!(:user) { create(:user) }
+	let!(:faculty_user) { create(:faculty_user) }
 	let!(:post) do
 		post = create(:post)
-		post.update(user: user)
+		post.update(user: faculty_user)
 		post
 	end
 
 	before do
-		sign_in_as!(user)
+		sign_in_as!(faculty_user)
 
 		visit '/'
 		click_link "Example Post"

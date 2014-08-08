@@ -3,17 +3,12 @@ require 'spec_helper'
 feature "Creating Posts" do
 
 	before do
-		sign_in_as!(create(:faculty_user))
-		user = create(:user)
-
 		visit '/'
 		click_link 'New Post'
 		message = "You need to sign in before continuing."
 		expect(page).to have_content(message)
 
-		fill_in "Email", with: user.email
-		fill_in "Password", with: user.password
-		click_button "Sign In"
+		sign_in_as!(create(:faculty_user))
 
 		click_link "New Post"
 	end
