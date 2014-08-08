@@ -6,5 +6,9 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		shutterfly_url "www.myshutterfly.com"
+
+		factory :faculty_user do
+			faculty true
+		end
 	end
 end

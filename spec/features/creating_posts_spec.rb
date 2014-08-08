@@ -3,6 +3,7 @@ require 'spec_helper'
 feature "Creating Posts" do
 
 	before do
+		sign_in_as!(create(:faculty_user))
 		user = create(:user)
 
 		visit '/'
