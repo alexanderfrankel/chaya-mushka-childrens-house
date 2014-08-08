@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
+	before_action :require_signin!, except: [:show, :index]
 
 	def index
 		@posts = Post.all
@@ -11,6 +12,7 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
+		@post.user = current_user
 
 		if @post.save
 			flash[:notice] = "Post has been created."
@@ -45,6 +47,19 @@ class PostsController < ApplicationController
 	end
 
 	private
+
+	def require_signin!
+		if current_user.nil?
+			flash[:error] = "You need to sign in before continuing."
+			redirect_to signin_url
+		end
+	end
+	helper_method :require_signin!
+
+	def current_user
+		@current_user ||= User.find(session[:user_id]) if session[:user_id]
+	end
+	helper_method :current_user
 
 	def post_params
 		params.require(:post).permit(:title, :content)

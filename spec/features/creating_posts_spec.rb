@@ -3,8 +3,18 @@ require 'spec_helper'
 feature "Creating Posts" do
 
 	before do
+		user = create(:user)
+
 		visit '/'
 		click_link 'New Post'
+		message = "You need to sign in before continuing."
+		expect(page).to have_content(message)
+
+		fill_in "Email", with: user.email
+		fill_in "Password", with: user.password
+		click_button "Sign In"
+
+		click_link "New Post"
 	end
 
 	scenario "can create a post" do
@@ -13,6 +23,10 @@ feature "Creating Posts" do
 		click_button 'Create Post'
 
 		expect(page).to have_content("Post has been created.")
+
+		within "#post #author" do
+			expect(page).to have_content("Created by sample@example.com")
+		end
 	end
 
 	scenario "can not create a post without a name" do
