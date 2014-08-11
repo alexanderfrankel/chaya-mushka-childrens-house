@@ -13,14 +13,14 @@ feature "Deleting users" do
 	end
 
 	scenario "Deleting a user" do
-		click_link user.email
+		click_link "#{user.last_name}, #{user.first_name}"
 		click_link "Delete User"
 
 		expect(page).to have_content("User has been deleted.")
 	end
 
 	scenario "Users cannot delete themselves" do
-		click_link admin_user.email
+		click_link "#{admin_user.last_name}, #{admin_user.first_name}"
 		click_link "Delete User"
 
 		expect(page).to have_content("You cannot delete yourself!")

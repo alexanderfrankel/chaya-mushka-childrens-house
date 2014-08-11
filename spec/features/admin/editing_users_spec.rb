@@ -9,19 +9,19 @@ feature "Editing a user" do
 		visit '/'
 		click_link "Admin"
 		click_link "Users"
-		click_link user.email
+		click_link "#{user.last_name}, #{user.first_name}"
 		click_link "Edit User"
 	end
 
 	scenario "Updating a user's details" do
-		fill_in "Email", with: "newguy@example.com"
+		fill_in "Last Name", with: "Newlastname"
 		click_button "Update User"
 
 		expect(page).to have_content("User has been updated.")
 
 		within("#users") do
-			expect(page).to have_content("newguy@example.com")
-			expect(page).to_not have_content(user.email)
+			expect(page).to have_content("Newlastname")
+			expect(page).to_not have_content(user.last_name)
 		end
 	end
 
@@ -32,18 +32,18 @@ feature "Editing a user" do
 		expect(page).to have_content("User has been updated.")
 
 		within("#users") do
-			expect(page).to have_content("#{user.email} (Admin)")
+			expect(page).to have_content("#{user.last_name}, #{user.first_name} (Admin)")
 		end
 	end
 
-	scenario "Toggling user's faculty abiity" do
+	scenario "Toggling user's faculty ability" do
 		check "Faculty?"
 		click_button "Update User"
 
 		expect(page).to have_content("User has been updated.")
 
 		within("#users") do
-			expect(page).to have_content("#{user.email} (Faculty)")
+			expect(page).to have_content("#{user.last_name}, #{user.first_name} (Faculty)")
 		end
 	end
 end
