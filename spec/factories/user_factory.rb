@@ -1,8 +1,10 @@
 FactoryGirl.define do
+	sequence(:email) { |n| "user#{n}@example.com" }
+
 	factory :user do
 		first_name "John"
 		last_name "Snow"
-		email "sample@example.com"
+		email { generate(:email) }
 		password "password"
 		password_confirmation "password"
 		shutterfly_url "www.myshutterfly.com"
