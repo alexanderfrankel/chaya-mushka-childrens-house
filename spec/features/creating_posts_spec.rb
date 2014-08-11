@@ -2,9 +2,10 @@ require 'spec_helper'
 
 feature "Creating Posts" do
 
-	before do
-		sign_in_as!(create(:faculty_user))
+	let(:faculty_user) { create(:faculty_user) }
 
+	before do
+		sign_in_as!(faculty_user)
 		click_link "New Post"
 	end
 
@@ -16,7 +17,7 @@ feature "Creating Posts" do
 		expect(page).to have_content("Post has been created.")
 
 		within "#post #author" do
-			expect(page).to have_content("Created by sample@example.com")
+			expect(page).to have_content("Created by #{faculty_user.email}")
 		end
 	end
 

@@ -35,4 +35,47 @@ describe User do
 			expect(user.authenticate("hunter1")).to_not be
 		end
 	end
+
+	it "requires an email" do
+		u = User.new(first_name: "alex",
+								 last_name: "frank",
+								 password: "password",
+								 password_confirmation: "password")
+
+		u.save
+		expect(u).to_not be_valid
+
+		u.email = "alex@frank.com"
+		u.save
+		expect(u).to be_valid
+	end
+
+	it "requires a first name" do
+		u = User.new(last_name: "frank",
+								 email: "frank@noname.com",
+								 password: "password",
+								 password_confirmation: "password")
+
+		u.save
+		expect(u).to_not be_valid
+
+		u.first_name = "Alex"
+		u.save
+		expect(u).to be_valid
+	end
+
+	it "requires a last name" do
+		u = User.new(first_name: "alex",
+								 email: "alex@noname.com",
+								 password: "password",
+								 password_confirmation: "password")
+
+		u.save
+		expect(u).to_not be_valid
+
+		u.last_name = "Frank"
+		u.save
+		expect(u).to be_valid
+	end
+
 end
