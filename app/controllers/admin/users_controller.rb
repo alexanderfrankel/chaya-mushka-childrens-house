@@ -1,6 +1,6 @@
 class Admin::UsersController < Admin::BaseController
 	def index
-		@users = User.order(:last_name)
+		@users = User.order(:email)
 	end
 
 	def new
@@ -22,6 +22,6 @@ class Admin::UsersController < Admin::BaseController
 	private
 
 	def user_params
-		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :shutterfly_url)
+		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :shutterfly_url, :faculty, :admin)
 	end
 end

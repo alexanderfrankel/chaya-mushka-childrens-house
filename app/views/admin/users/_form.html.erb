@@ -43,6 +43,16 @@
 		<%= f.text_field :shutterfly_url %>
 	</p>
 
+	<p>
+		<%= f.check_box :faculty %>
+		<%= f.label :faculty, "Is faculty?" %>
+	</p>
+
+	<p>
+		<%= f.check_box :admin %>
+		<%= f.label :admin, "Is an admin?" %>
+	</p>
+
 	<%= f.submit %>
 
 <% end %>
