@@ -17,7 +17,7 @@
 	<nav>
 		<ul>
 			<% if current_user %>
-				Signed in as <%= current_user.email %>
+				<li>Signed in as <%= current_user.first_name %> <%= current_user.last_name %></li>
 				<% admins_only do %>
 					<li><%= link_to "Admin", admin_root_path %></li>
 				<% end %>
