@@ -29,7 +29,7 @@ feature "Creating Users" do
 		fill_in "Email", with: "admin@new.com"
 		fill_in "Password", with: "password"
 		fill_in "Password Confirmation", with: "password"
-		check "Is an admin?"
+		check "Admin?"
 		click_button "Create User"
 
 		expect(page).to have_content("User has been created.")
@@ -44,7 +44,7 @@ feature "Creating Users" do
 		fill_in "Email", with: "faculty@new.com"
 		fill_in "Password", with: "password"
 		fill_in "Password Confirmation", with: "password"
-		check "Is faculty?"
+		check "Faculty?"
 		click_button "Create User"
 
 		expect(page).to have_content("User has been created.")
