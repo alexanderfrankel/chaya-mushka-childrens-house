@@ -10,5 +10,9 @@ FactoryGirl.define do
 		factory :faculty_user do
 			faculty true
 		end
+
+		factory :admin_user do
+			admin true
+		end
 	end
 end
