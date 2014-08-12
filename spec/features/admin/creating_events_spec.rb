@@ -20,6 +20,9 @@ feature "Creating Events" do
 		click_button "Add Event"
 
 		expect(page).to have_content("Event has been added.")
+		within("#events") do
+			expect(page).to have_content("Example Event")
+		end
 	end
 
 	scenario "can not add an event without a title" do

@@ -1,4 +1,6 @@
 class Admin::EventsController < Admin::BaseController
+	before_action :set_event, only: [:show, :edit, :update, :destroy]
+
 	def index
 		@events = Event.order(:start_date)
 	end
@@ -16,6 +18,22 @@ class Admin::EventsController < Admin::BaseController
 		else
 			flash[:alert] = "Event has not been added."
 			render "new"
+		end
+	end
+
+	def show
+	end
+
+	def edit
+	end
+
+	def update
+		if @event.update(event_params)
+			flash[:notice] = "Event has been updated."
+			redirect_to admin_events_path
+		else
+			flash[:alert] = "Event has not been updated."
+			render "edit"
 		end
 	end
 
