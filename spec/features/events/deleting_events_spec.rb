@@ -8,8 +8,7 @@ feature "Deleting events" do
 		sign_in_as!(admin_user)
 		visit '/'
 
-		click_link "Admin"
-		click_link "Events"
+		click_link "News & Events"
 	end
 
 	scenario "Deleting an event" do
