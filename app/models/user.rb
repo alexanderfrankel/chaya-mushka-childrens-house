@@ -7,11 +7,11 @@ class User < ActiveRecord::Base
 
 	def to_s
 		if admin?
-			"#{email} (Admin)"
+			"#{last_name}, #{first_name} (Admin)"
 		elsif faculty?
-			"#{email} (Faculty)"
+			"#{last_name}, #{first_name} (Faculty)"
 		else
-			"#{email}"
+			"#{last_name}, #{first_name}"
 		end
 	end
 end

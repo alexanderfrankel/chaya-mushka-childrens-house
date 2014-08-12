@@ -34,7 +34,7 @@ feature "Creating Users" do
 
 		expect(page).to have_content("User has been created.")
 		within("#users") do
-			expect(page).to have_content("admin@new.com (Admin)")
+			expect(page).to have_content("New, Admin (Admin)")
 		end
 	end
 
@@ -49,7 +49,7 @@ feature "Creating Users" do
 
 		expect(page).to have_content("User has been created.")
 		within("#users") do
-			expect(page).to have_content("faculty@new.com (Faculty)")
+			expect(page).to have_content("New, Faculty (Faculty)")
 		end
 	end
 end
