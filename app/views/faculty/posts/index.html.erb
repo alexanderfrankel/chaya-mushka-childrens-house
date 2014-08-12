@@ -4,6 +4,6 @@
 
 <ul>
 	<% @posts.each do |post| %>
-		<li><%= link_to post.title, faculty_post_path(post) %></li>
+		<li><%= link_to post.title, [:faculty, post] %></li>
 	<% end %>
 </ul>
