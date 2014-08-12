@@ -31,7 +31,7 @@ class Faculty::PostsController < Faculty::BaseController
 	def update
 		if @post.update(post_params)
 			flash[:notice] = "Post has been updated."
-			redirect_to faculty_post(@post)
+			redirect_to faculty_post_path(@post)
 		else
 			flash[:alert] = "Post has not been updated."
 			render "edit"
