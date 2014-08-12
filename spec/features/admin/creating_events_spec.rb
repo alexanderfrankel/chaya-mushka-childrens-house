@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Creating Events" do
 
-	let (:admin_user) { create(:admin_user) }
+	let(:admin_user) { create(:admin_user) }
 
 	before do
 		sign_in_as!(admin_user)
