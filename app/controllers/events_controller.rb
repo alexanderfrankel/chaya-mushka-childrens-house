@@ -1,4 +1,5 @@
-class Admin::EventsController < Admin::BaseController
+class EventsController < ApplicationController
+	before_action :authorize_admin!, except: [:index, :show]
 	before_action :set_event, only: [:show, :edit, :update, :destroy]
 
 	def index
@@ -14,7 +15,7 @@ class Admin::EventsController < Admin::BaseController
 
 		if @event.save
 			flash[:notice] = "Event has been added."
-			redirect_to admin_events_path
+			redirect_to events_path
 		else
 			flash[:alert] = "Event has not been added."
 			render "new"
@@ -30,7 +31,7 @@ class Admin::EventsController < Admin::BaseController
 	def update
 		if @event.update(event_params)
 			flash[:notice] = "Event has been updated."
-			redirect_to admin_events_path
+			redirect_to events_path
 		else
 			flash[:alert] = "Event has not been updated."
 			render "edit"
@@ -41,7 +42,7 @@ class Admin::EventsController < Admin::BaseController
 		@event.destroy
 
 		flash[:notice] = "Event has been deleted."
-		redirect_to admin_events_path
+		redirect_to events_path
 	end
 
 	private
@@ -54,6 +55,6 @@ class Admin::EventsController < Admin::BaseController
 		@event = Event.find(params[:id])
 	rescue ActiveRecord::RecordNotFound
 		flash[:alert] = "The event you were looking for could not be found."
-		redirect_to admin_events_path
+		redirect_to events_path
 	end
 end

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 	post "/signin", to: "sessions#create"
 
 	resources :users, only: [:edit, :update, :show]
+	resources :events
 
 	namespace :faculty do
 		root :to => "base#index"
@@ -14,6 +15,5 @@ Rails.application.routes.draw do
 	namespace :admin do
 		root :to => "base#index"
 		resources :users
-		resources :events
 	end
 end
