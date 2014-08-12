@@ -5,7 +5,8 @@ feature "Viewing Events" do
 		event = create(:event)
 
 		visit '/'
+		click_link "News & Events"
 		click_link event.title
-		expect(page.current_url).to eql()
+		expect(page.current_url).to eql(event_url(event))
 	end
 end
