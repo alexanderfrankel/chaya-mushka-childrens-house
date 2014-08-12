@@ -37,6 +37,13 @@ class Admin::EventsController < Admin::BaseController
 		end
 	end
 
+	def destroy
+		@event.destroy
+
+		flash[:notice] = "Event has been deleted."
+		redirect_to admin_events_path
+	end
+
 	private
 
 	def event_params
