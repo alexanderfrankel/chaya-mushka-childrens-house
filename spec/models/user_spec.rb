@@ -78,4 +78,21 @@ describe User do
 		expect(u).to be_valid
 	end
 
+	describe "admin users" do
+		it "must also be a faculty user" do
+			u = User.new(first_name: "alex",
+									 last_name: "frank",
+								 	 email: "alex@noname.com",
+								 	 password: "password",
+								 	 password_confirmation: "password",
+								 	 admin: true)
+
+			u.save
+			expect(u).to_not be_valid
+
+			u.faculty = true
+			u.save
+			expect(u).to be_valid
+		end
+	end
 end
