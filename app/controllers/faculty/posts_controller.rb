@@ -1,5 +1,4 @@
-class PostsController < ApplicationController
-	before_action :authorize_faculty!, except: [:index, :show]
+class Faculty::PostsController < Faculty::BaseController
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
 
 	def index
@@ -16,7 +15,7 @@ class PostsController < ApplicationController
 
 		if @post.save
 			flash[:notice] = "Post has been created."
-			redirect_to @post
+			redirect_to faculty_post_path(@post)
 		else
 			flash[:alert] = "Post has not been created."
 			render "new"
@@ -32,7 +31,7 @@ class PostsController < ApplicationController
 	def update
 		if @post.update(post_params)
 			flash[:notice] = "Post has been updated."
-			redirect_to @post
+			redirect_to faculty_post_path(@post)
 		else
 			flash[:alert] = "Post has not been updated."
 			render "edit"
@@ -43,7 +42,7 @@ class PostsController < ApplicationController
 		@post.destroy
 
 		flash[:notice] = "Post has been deleted."
-		redirect_to posts_path
+		redirect_to faculty_posts_path
 	end
 
 	private
@@ -56,6 +55,6 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 	rescue ActiveRecord::RecordNotFound
 		flash[:alert] = "The post you were looking for could not be found."
-		redirect_to posts_path
+		redirect_to faculty_posts_path
 	end
 end

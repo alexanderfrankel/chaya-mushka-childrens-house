@@ -18,6 +18,9 @@
 		<ul>
 			<% if current_user %>
 				<li>Signed in as <%= current_user.first_name %> <%= current_user.last_name %></li>
+				<% faculty_only do %>
+					<li><%= link_to "Faculty", faculty_root_path %></li>
+				<% end %>
 				<% admins_only do %>
 					<li><%= link_to "Admin", admin_root_path %></li>
 				<% end %>

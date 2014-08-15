@@ -2,12 +2,11 @@ require 'spec_helper'
 
 feature "Creating Events" do
 
-	let (:admin_user) { create(:admin_user) }
+	let(:admin_user) { create(:admin_user) }
 
 	before do
 		sign_in_as!(admin_user)
 		visit '/'
-		click_link "Admin"
 		click_link "News & Events"
 		click_link "Add Event"
 	end
@@ -20,6 +19,9 @@ feature "Creating Events" do
 		click_button "Add Event"
 
 		expect(page).to have_content("Event has been added.")
+		within("#events") do
+			expect(page).to have_content("Example Event")
+		end
 	end
 
 	scenario "can not add an event without a title" do

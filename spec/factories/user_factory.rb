@@ -18,7 +18,7 @@ FactoryGirl.define do
 		factory :admin_user do
 			first_name "Ad"
 			last_name "Min"
-			factory true
+			faculty true
 			admin true
 		end
 	end

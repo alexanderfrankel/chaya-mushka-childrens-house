@@ -29,6 +29,7 @@ feature "Creating Users" do
 		fill_in "Email", with: "admin@new.com"
 		fill_in "Password", with: "password"
 		fill_in "Password Confirmation", with: "password"
+		check "Faculty?"
 		check "Admin?"
 		click_button "Create User"
 
@@ -36,6 +37,19 @@ feature "Creating Users" do
 		within("#users") do
 			expect(page).to have_content("New, Admin (Admin)")
 		end
+	end
+
+	scenario "Cannot create an admin user if they are not faculty" do
+		fill_in "First Name", with: "Admin"
+		fill_in "Last Name", with: "New"
+		fill_in "Email", with: "admin@new.com"
+		fill_in "Password", with: "password"
+		fill_in "Password Confirmation", with: "password"
+		check "Admin?"
+		click_button "Create User"
+
+		expect(page).to have_content("User has not been created.")
+		expect(page).to have_content("Admin users must also be Faculty users.")
 	end
 
 	scenario "Creating a faculty user" do

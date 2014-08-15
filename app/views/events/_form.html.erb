@@ -1,4 +1,4 @@
-<%= form_for [:admin, @event] do |f| %>
+<%= form_for @event do |f| %>
 
 	<% if @event.errors.any? %>
 		<div id="error_explanation">
@@ -34,5 +34,9 @@
 		<%= f.text_field :end_date %>
 	</p>
 
-	<%= f.submit "Add Event" %>
+	<% if @event.new_record? %>
+		<%= f.submit "Add Event" %>
+	<% else %>
+		<%= f.submit "Update Event" %>
+	<% end %>
 <% end %>
