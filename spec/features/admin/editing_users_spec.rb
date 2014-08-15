@@ -26,6 +26,7 @@ feature "Editing a user" do
 	end
 
 	scenario "Toggling user's admin ability" do
+		check "Faculty?"
 		check "Admin?"
 		click_button "Update User"
 
