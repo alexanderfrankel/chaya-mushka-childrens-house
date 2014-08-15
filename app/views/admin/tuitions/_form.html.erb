@@ -1,0 +1,33 @@
+<%= form_for [:admin, @tuition] do |f| %>
+
+	<% if @tuition.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@tuition.errors.count, "error") %>
+				prohibited this tuition information from being saved:</h2>
+
+			<ul>
+				<% @tuition.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= f.label :year %>
+		<%= f.text_field :year %>
+	</p>
+
+	<p>
+		<%= f.label :amount %>
+		$<%= f.text_field :amount %>
+	</p>
+
+	<p>
+		<%= f.check_box :current %>
+		<%= f.label :current, "Current?" %>
+	</p>
+
+	<%= f.submit %>
+
+<% end %>
