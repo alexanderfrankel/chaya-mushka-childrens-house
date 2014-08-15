@@ -15,7 +15,7 @@ feature "Creating Tuitions" do
 		fill_in "Year", with: "2015 - 2016"
 		fill_in "Amount", with: 2000
 		check "Current?"
-		click_button "Save Tuition Information"
+		click_button "Save"
 
 		expect(page).to have_content("Tuition information has been saved.")
 		within("#tuitions") do
@@ -26,7 +26,7 @@ feature "Creating Tuitions" do
 	scenario "Creating a non-current tuition year" do
 		fill_in "Year", with: "2016 - 2017"
 		fill_in "Amount", with: 3000
-		click_button "Save Tuition Information"
+		click_button "Save"
 
 		expect(page).to have_content("Tuition information has been saved.")
 		within("#tuitions") do
@@ -36,7 +36,7 @@ feature "Creating Tuitions" do
 
 	scenario "cannot create a tuition year without a year" do
 		fill_in "Amount", with: 3000
-		click_button "Save Tuition Information"
+		click_button "Save"
 
 		expect(page).to have_content("Tuition information has not been saved.")
 		expect(page).to have_content("Year can't be blank")
@@ -44,7 +44,7 @@ feature "Creating Tuitions" do
 
 	scenario "cannot create a tuition year without an amount" do
 		fill_in "Year", with: "2016 - 2017"
-		click_button "Save Tuition Information"
+		click_button "Save"
 
 		expect(page).to have_content("Tuition information has not been saved.")
 		expect(page).to have_content("Amount can't be blank")
@@ -53,7 +53,7 @@ feature "Creating Tuitions" do
 	scenario "cannot create a tuition year with an amount less than 0" do
 		fill_in "Year", with: "2016 - 2017"
 		fill_in "Amount", with: -2
-		click_button "Save Tuition Information"
+		click_button "Save"
 
 		expect(page).to have_content("Tuition information has not been saved.")
 		expect(page).to have_content("Amount must be greater than or equal to 0")
