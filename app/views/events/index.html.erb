@@ -1,4 +1,7 @@
-<%= link_to "Add Event", new_event_path %>
+<% admins_only do %>
+	<%= link_to "Add Event", new_event_path %>
+<% end %>
+
 <ul id="events">
 	<% @events.each do |event| %>
 		<li><%= link_to event.title, event %></li>
