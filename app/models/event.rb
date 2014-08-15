@@ -5,6 +5,8 @@ class Event < ActiveRecord::Base
 	validates :end_date, presence: true
 	validate :start_date_cannot_be_in_the_past, :end_date_cannot_be_in_the_past, :end_date_must_come_after_the_start_date
 
+	belongs_to :user
+
 	def start_date_cannot_be_in_the_past
 		if start_date.present? && start_date < Date.today
 			errors.add(:start_date, "can't be in the past")
