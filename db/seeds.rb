@@ -45,3 +45,12 @@ event2 = Event.create(title: "Event 2",
 											description: "Event 2's description goes here.",
 											start_date: "2015-07-03 00:00:00",
 											end_date: "2015-07-04 00:00:00")
+
+# TUITIONS ----------------------------------------
+
+tuition1 = Tuition.create(year: "2013 - 2014",
+													amount: 500)
+
+tuition2 = Tuition.create(year: "2014 - 2015",
+													amount: 1000,
+													current: true)
