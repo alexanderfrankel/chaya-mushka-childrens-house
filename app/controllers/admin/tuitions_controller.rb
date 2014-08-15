@@ -6,9 +6,19 @@ class Admin::TuitionsController < Admin::BaseController
 	end
 
 	def new
+		@tuition = Tuition.new
 	end
 
 	def create
+		@tuition = Tuition.new(tuition_params)
+
+		if @tuition.save
+			flash[:notice] = "Tuition information has been saved."
+			redirect_to admin_tuitions_path
+		else
+			flash[:alert] = "Tuition information has not been saved."
+			render "new"
+		end
 	end
 
 	def show

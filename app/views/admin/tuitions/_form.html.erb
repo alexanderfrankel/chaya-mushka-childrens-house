@@ -28,6 +28,10 @@
 		<%= f.label :current, "Current?" %>
 	</p>
 
-	<%= f.submit %>
+	<% if @tuition.new_record? %>
+		<%= f.submit "Save Tuition Information" %>
+	<% else %>
+		<%= f.submit "Update Tuition Information" %>
+	<% end %>
 
 <% end %>

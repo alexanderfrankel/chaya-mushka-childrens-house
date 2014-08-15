@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20140815130615) do
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "tuitions", force: true do |t|
-    t.string  "year",    default: "2014"
-    t.integer "amount",  default: 0
+    t.string  "year"
+    t.integer "amount"
     t.boolean "current", default: false
   end
 
