@@ -40,7 +40,7 @@ describe Admin::TuitionsController do
 			sign_in(admin_user)
 		end
 
-		it "displays an error for a missing user" do
+		it "displays an error for a missing tuition" do
 			get :show, id: "not-here"
 
 			expect(response).to redirect_to(admin_tuitions_path)

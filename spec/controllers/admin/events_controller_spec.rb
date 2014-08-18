@@ -40,7 +40,7 @@ describe Admin::EventsController do
 			sign_in(admin_user)
 		end
 
-		it "displays an error for a missing user" do
+		it "displays an error for a missing event" do
 			get :show, id: "not-here"
 
 			expect(response).to redirect_to(admin_events_path)
