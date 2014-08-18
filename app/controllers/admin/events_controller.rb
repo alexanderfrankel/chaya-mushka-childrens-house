@@ -11,6 +11,7 @@ class Admin::EventsController < Admin::BaseController
 
 	def create
 		@event = Event.new(event_params)
+		@event.user = current_user
 
 		if @event.save
 			flash[:notice] = "Event has been added."
