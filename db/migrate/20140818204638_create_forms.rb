@@ -4,7 +4,7 @@ class CreateForms < ActiveRecord::Migration
     	t.string :title
     	t.string :description
     	t.string :url
-    	t.references :user
+    	t.references :user, index: true
 
     	t.timestamps
     end

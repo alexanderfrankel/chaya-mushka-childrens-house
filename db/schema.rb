@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20140818204638) do
     t.datetime "updated_at"
   end
 
+  add_index "forms", ["user_id"], name: "index_forms_on_user_id", using: :btree
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "content"
