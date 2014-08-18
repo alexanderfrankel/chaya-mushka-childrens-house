@@ -37,6 +37,13 @@ class Admin::FormsController < Admin::BaseController
 		end
 	end
 
+	def destroy
+		@form.destroy
+
+		flash[:notice] = "Form has been deleted."
+		redirect_to admin_forms_path
+	end
+
 	private
 
 	def form_params
