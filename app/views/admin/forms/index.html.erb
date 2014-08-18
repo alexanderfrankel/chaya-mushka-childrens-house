@@ -1,0 +1,9 @@
+<h2>Forms</h2>
+
+<%= link_to "New Form", new_admin_form_path %>
+
+<ul id="forms">
+	<% @forms.each do |form| %>
+		<li><%= link_to form.title, [:admin, form] %></li>
+	<% end %>
+</ul>

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 		root :to => "base#index"
 		resources :users
 		resources :events
+		resources :forms
 		resources :tuitions, except: :destroy
 	end
 end
