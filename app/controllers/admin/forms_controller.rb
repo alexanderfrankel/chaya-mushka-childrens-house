@@ -11,6 +11,7 @@ class Admin::FormsController < Admin::BaseController
 
 	def create
 		@form = Form.new(form_params)
+		@form.user = current_user
 
 		if @form.save
 			flash[:notice] = "Form has been added."
