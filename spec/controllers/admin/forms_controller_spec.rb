@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Admin::EventsController do
+describe Admin::FormsController do
 	let(:user) { create(:user) }
 	let(:faculty_user) { create(:faculty_user) }
 	let(:admin_user) { create(:admin_user) }
@@ -40,11 +40,11 @@ describe Admin::EventsController do
 			sign_in(admin_user)
 		end
 
-		it "displays an error for a missing event" do
+		it "displays an error for a missing form" do
 			get :show, id: "not-here"
 
-			expect(response).to redirect_to(admin_events_path)
-			message = "The event you were looking for could not be found."
+			expect(response).to redirect_to(admin_forms_path)
+			message = "The form you were looking for could not be found."
 			expect(flash[:alert]).to eql(message)
 		end
 	end
