@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 	validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 	validate :admin_user_must_also_be_a_faculty_user
 
+	belongs_to :user
+
 	has_secure_password
 
 	def admin_user_must_also_be_a_faculty_user

@@ -11,6 +11,7 @@ class Admin::UsersController < Admin::BaseController
 
 	def create
 		@user = User.new(user_params)
+		@user.user = current_user
 
 		if @user.save
 			flash[:notice] = "User has been created."
