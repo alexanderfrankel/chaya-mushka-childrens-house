@@ -95,4 +95,24 @@ describe User do
 			expect(u).to be_valid
 		end
 	end
+
+	describe "email addresses" do
+		it "must be unique" do
+			u = User.new(first_name: "alex",
+									 last_name: "frank",
+									 email: "dup@me.com",
+									 password: "password",
+									 password_confirmation: "password")
+			u.save
+			expect(u).to be_valid
+
+			i = User.new(first_name: "alex",
+								 	 last_name: "frank",
+								 	 email: "dup@me.com",
+								 	 password: "password",
+								 	 password_confirmation: "password")
+			i.save
+			expect(i).to_not be_valid
+		end
+	end
 end

@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
 	validates :first_name, presence: true
 	validates :last_name, presence: true
-	validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+	validates :email, presence: true, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 	validate :admin_user_must_also_be_a_faculty_user
+
+	belongs_to :administrator, :class_name => "User"
 
 	has_secure_password
 

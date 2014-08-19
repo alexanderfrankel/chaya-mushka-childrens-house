@@ -11,6 +11,7 @@ class Admin::TuitionsController < Admin::BaseController
 
 	def create
 		@tuition = Tuition.new(tuition_params)
+		@tuition.user = current_user
 
 		if @tuition.save
 			flash[:notice] = "Tuition information has been saved."

@@ -1,6 +1,9 @@
 class Tuition < ActiveRecord::Base
-	validates :year, presence: true
+	validates :year, presence: true, uniqueness: true
 	validates :amount, presence: true, numericality: { :greater_than_or_equal_to => 0 }
+	validates :current, uniqueness: true
+
+	belongs_to :user
 
 	def to_s
 		if current?
