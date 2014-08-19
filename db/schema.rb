@@ -66,11 +66,11 @@ ActiveRecord::Schema.define(version: 20140819163712) do
     t.string   "shutterfly_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "faculty",         default: false
-    t.boolean  "admin",           default: false
-    t.integer  "user_id"
+    t.boolean  "faculty",          default: false
+    t.boolean  "admin",            default: false
+    t.integer  "administrator_id"
   end
 
-  add_index "users", ["user_id"], name: "index_users_on_user_id", using: :btree
+  add_index "users", ["administrator_id"], name: "index_users_on_administrator_id", using: :btree
 
 end
