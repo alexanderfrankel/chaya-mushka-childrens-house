@@ -24,4 +24,12 @@ feature 'Signing In' do
 
 		expect(page).to have_content("Sorry. Your email or password is invalid.")
 	end
+
+	scenario 'Sign Out' do
+		sign_in_as!(create(:user))
+
+		visit '/'
+		click_link 'Sign Out'
+		expect(page).to have_content("Signed out successfully.")
+	end
 end
