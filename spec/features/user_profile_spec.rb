@@ -48,3 +48,16 @@ feature "Editing Users" do
 		expect(page).to have_content("Profile has not been updated.")
 	end
 end
+
+feature "Shutterfly URL" do
+	let!(:user) { create(:user) }
+
+	before do
+		sign_in_as!(user)
+	end
+
+	scenario "viewing" do
+		visit user_path(user)
+		expect(page).to have_content("Shutterfly")
+	end
+end

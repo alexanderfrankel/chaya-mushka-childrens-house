@@ -1,3 +1,5 @@
 <h2>Welcome <%= @user.first_name %> <%= @user.last_name %></h2>
 
 <%= link_to "Edit Profile", edit_user_path(@user) %>
+
+<a href="http://<%= @user.shutterfly_url %>">Shutterfly</a>
