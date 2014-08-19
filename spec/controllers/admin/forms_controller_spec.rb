@@ -13,7 +13,7 @@ describe Admin::FormsController do
 		  edit: :get,
 		  update: :put }.each do |action, method|
 		  	it "cannot access the #{action} action" do
-		  		send(method, action, :id => create(:post))
+		  		send(method, action, :id => create(:form))
 		  		expect(response).to redirect_to(root_path)
 		  		expect(flash[:alert]).to eql("You must be an admin to do that.")
 		  	end
@@ -28,7 +28,7 @@ describe Admin::FormsController do
 		  edit: :get,
 		  update: :put }.each do |action, method|
 		  	it "cannot access the #{action} action" do
-		  		send(method, action, :id => create(:post))
+		  		send(method, action, :id => create(:form))
 		  		expect(response).to redirect_to(root_path)
 		  		expect(flash[:alert]).to eql("You must be an admin to do that.")
 		  	end
