@@ -1,0 +1,7 @@
+<h2>Tuition Information</h2>
+
+<ul id="tuitions">
+	<% @tuitions.each do |tuition| %>
+		<li><%= link_to tuition, tuition %></li>
+	<% end %>
+</ul>
