@@ -62,9 +62,9 @@ tuition2 = Tuition.create(year: "2014 - 2015",
 # FORMS -------------------------------------------
 
 form1 = Form.create(title: "Form 1",
-										content: "Form 1's content goes here.",
+										description: "Form 1's description goes here.",
 										user: admin)
 
 form2 = Form.create(title: "Form 2",
-										content: "Form 2's content goes here.",
+										description: "Form 2's description goes here.",
 										user: admin)
