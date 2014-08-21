@@ -1,11 +1,18 @@
+require 'spec_helper'
+
 describe UsersController do
+	let!(:user) { create(:user) }
+	let!(:user2) { create(:user) }
+
+	before do
+		sign_in(user)
+	end
 
 	context "User" do
 		{ show: :get,
-		  edit: :get,
-		  update: :put }.each do |action, method|
+		  edit: :get }.each do |action, method|
 		  	it "can access the #{action} action" do
-		  		send(method, action, :id => create(:user))
+		  		send(method, action, :id => user)
 		  		expect(response.status).to eq(200)
 		  	end
 		  end
@@ -20,14 +27,13 @@ describe UsersController do
 	end
 
 	context "Anonymous" do
-		# { show: :get,
-		#   edit: :get,
-		#   update: :put }.each do |action, method|
-		#   	it "cannot access the #{action} action" do
-		#   		send(method, action, :id => create(:user))
-		#   		expect(response).to redirect_to(root_path)
-		#   		expect(flash[:alert]).to eql("You must be logged in as this user to do that.")
-		#   	end
-		#   end
+		{ show: :get,
+		  edit: :get }.each do |action, method|
+		  	it "cannot access the #{action} action" do
+		  		send(method, action, :id => user2)
+		  		expect(response).to redirect_to(root_path)
+		  		expect(flash[:alert]).to eql("You do not have access. If you have recieved this message in error, please contact the administrative office.")
+		  	end
+		  end
 	end
 end
