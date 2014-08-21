@@ -11,3 +11,6 @@
 
 # Ignore secrets.yml
 /config/secrets.yml
+
+#Ignore publicly uploaded files
+public/uploads

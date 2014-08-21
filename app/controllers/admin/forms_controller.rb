@@ -48,7 +48,7 @@ class Admin::FormsController < Admin::BaseController
 	private
 
 	def form_params
-		params.require(:form).permit(:title, :description, :url)
+		params.require(:form).permit(:title, :description, :url, :asset)
 	end
 
 	def set_form

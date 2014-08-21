@@ -29,4 +29,18 @@ feature "Creating Forms" do
 		expect(page).to have_content("Form has not been added.")
 		expect(page).to have_content("Title can't be blank")
 	end
+
+	scenario "creating a form with an attachment" do
+		fill_in "Title", with: "Form with attachment"
+		fill_in "Description", with: "The attachment will be uploaded."
+		attach_file "Form Upload", "spec/fixtures/example_form.txt"
+		click_button "Add Form"
+
+		expect(page).to have_content("Form has been added.")
+
+		click_link "Form with attachment"
+		within("#form") do
+			expect(page).to have_content("example_form.txt")
+		end
+	end
 end

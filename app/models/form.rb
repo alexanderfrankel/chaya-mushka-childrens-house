@@ -3,4 +3,6 @@ class Form < ActiveRecord::Base
 	validates :description, presence: true
 
 	belongs_to :user
+
+	mount_uploader :asset, AssetUploader
 end
