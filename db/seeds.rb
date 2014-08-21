@@ -39,18 +39,32 @@ post2 = Post.create(title: "Post 2",
 event1 = Event.create(title: "Event 1",
 											description: "Event 1's description goes here.",
 											start_date: "2015-09-03 00:00:00",
-											end_date: "2015-09-04 00:00:00")
+											end_date: "2015-09-04 00:00:00",
+											user: admin)
 
 event2 = Event.create(title: "Event 2",
 											description: "Event 2's description goes here.",
 											start_date: "2015-07-03 00:00:00",
-											end_date: "2015-07-04 00:00:00")
+											end_date: "2015-07-04 00:00:00",
+											user: admin)
 
 # TUITIONS ----------------------------------------
 
 tuition1 = Tuition.create(year: "2013 - 2014",
-													amount: 500)
+													amount: 500,
+													user: admin)
 
 tuition2 = Tuition.create(year: "2014 - 2015",
 													amount: 1000,
-													current: true)
+													current: true,
+													user: admin)
+
+# FORMS -------------------------------------------
+
+form1 = Form.create(title: "Form 1",
+										description: "Form 1's description goes here.",
+										user: admin)
+
+form2 = Form.create(title: "Form 2",
+										description: "Form 2's description goes here.",
+										user: admin)
