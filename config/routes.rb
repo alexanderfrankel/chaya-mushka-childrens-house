@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 	delete "/signout", to: "sessions#destroy", as: "signout"
 
 	resources :users, only: [:edit, :update, :show]
+	resources :events, only: [:index, :show]
 
 	namespace :faculty do
 		root :to => "base#index"
