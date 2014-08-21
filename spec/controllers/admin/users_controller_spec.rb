@@ -14,7 +14,7 @@ describe Admin::UsersController do
 		  update: :put,
 		  destroy: :delete }.each do |action, method|
 		  	it "cannot access the #{action} action" do
-		  		send(method, action, :id => create(:post))
+		  		send(method, action, :id => create(:user))
 		  		expect(response).to redirect_to(root_path)
 		  		expect(flash[:alert]).to eql("You must be an admin to do that.")
 		  	end
@@ -30,7 +30,7 @@ describe Admin::UsersController do
 		  update: :put,
 		  destroy: :delete }.each do |action, method|
 		  	it "cannot access the #{action} action" do
-		  		send(method, action, :id => create(:post))
+		  		send(method, action, :id => create(:user))
 		  		expect(response).to redirect_to(root_path)
 		  		expect(flash[:alert]).to eql("You must be an admin to do that.")
 		  	end

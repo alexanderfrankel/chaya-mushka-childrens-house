@@ -1,0 +1,7 @@
+<h2>Faculty &amp; Staff</h2>
+
+<ul id="staff">
+	<% @staff.each do |staff_member| %>
+		<li><%= link_to "#{staff_member.first_name} #{staff_member.last_name}", staff_path(staff_member) %></li>
+	<% end %>
+</ul>

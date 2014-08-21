@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 	before_action :set_user
+	before_action :authorize_user!
 
 	def show
 	end
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :shutterfly_url)
+		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
 	end
 
 	def set_user
@@ -28,5 +29,16 @@ class UsersController < ApplicationController
 	rescue ActiveRecord::RecordNotFound
 		flash[:alert] = "The user you were looking for could not be found."
 		redirect_to root_path
+	end
+
+	def authorize_user!
+	  require_signin!
+
+	  if current_user.nil? == false
+	    unless current_user == @user
+	    	flash[:alert] = "You do not have access. If you have recieved this message in error, please contact the administrative office."
+	    	redirect_to root_path
+	    end
+	  end
 	end
 end
