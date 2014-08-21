@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 	resources :users, only: [:edit, :update, :show]
 	resources :events, only: [:index, :show]
 	resources :tuitions, only: [:index, :show]
+	resources :staff, only: [:index, :show]
 
 	namespace :faculty do
 		root :to => "base#index"
