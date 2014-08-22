@@ -14,42 +14,45 @@
 		</div>
 	<% end %>
 
-	<div class="navbar">
+
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
+
 			<span class="brand">Chaya Mushka</span>
-			<ul class="nav">
-				<li><%= link_to "Home", root_path %></li>
+
+			<ul class="nav pull-right">
+				<li class="active"><%= link_to "Home", root_path %></li>
+				<li class="divider-vertical"></li>
+
 				<% if current_user %>
-					<li>Signed in as <%= current_user.first_name %> <%= current_user.last_name %></li>
+
 					<% faculty_only do %>
 						<li><%= link_to "Faculty", faculty_root_path %></li>
+						<li class="divider-vertical"></li>
 					<% end %>
+
 					<% admins_only do %>
 						<li><%= link_to "Admin", admin_root_path %></li>
+						<li class="divider-vertical"></li>
 					<% end %>
+
 					<li><%= link_to "Profile", user_path(current_user) %></li>
+					<li class="divider-vertical"></li>
 					<li><%= link_to "Sign Out", signout_path, method: :delete %></li>
+					<li class="divider-vertical"></li>
+
 				<% else %>
+
 					<li><%= link_to "Sign In", signin_path %></li>
+					<li class="divider-vertical"></li>
 				<% end %>
+
 			</ul>
 		</div>
 	</div>
 
 	<div class="container">
-		<div class="row">
-			<div class="span3">
-				<ul>
-					<li><%= link_to "News & Events", events_path %></li>
-					<li><%= link_to "Tuition Information", tuitions_path %></li>
-					<li><%= link_to "Faculty & Staff", staff_index_path %></li>
-					<li><%= link_to "Forms", forms_path %></li>
-				</ul>
-			</div>
-			<div class="span9">
-				<%= yield %>
-			</div>
-		</div>
+		<%= yield %>
 	</div>
 
 </body>
