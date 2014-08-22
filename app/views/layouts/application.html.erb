@@ -14,25 +14,43 @@
 		</div>
 	<% end %>
 
-	<nav>
-		<ul>
-			<% if current_user %>
-				<li>Signed in as <%= current_user.first_name %> <%= current_user.last_name %></li>
-				<% faculty_only do %>
-					<li><%= link_to "Faculty", faculty_root_path %></li>
+	<div class="navbar">
+		<div class="navbar-inner">
+			<span class="brand">Chaya Mushka</span>
+			<ul class="nav">
+				<li><%= link_to "Home", root_path %></li>
+				<% if current_user %>
+					<li>Signed in as <%= current_user.first_name %> <%= current_user.last_name %></li>
+					<% faculty_only do %>
+						<li><%= link_to "Faculty", faculty_root_path %></li>
+					<% end %>
+					<% admins_only do %>
+						<li><%= link_to "Admin", admin_root_path %></li>
+					<% end %>
+					<li><%= link_to "Profile", user_path(current_user) %></li>
+					<li><%= link_to "Sign Out", signout_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to "Sign In", signin_path %></li>
 				<% end %>
-				<% admins_only do %>
-					<li><%= link_to "Admin", admin_root_path %></li>
-				<% end %>
-				<li><%= link_to "Profile", user_path(current_user) %></li>
-				<li><%= link_to "Sign Out", signout_path, method: :delete %></li>
-			<% else %>
-				<li><%= link_to "Sign In", signin_path %></li>
-			<% end %>
-		</ul>
-	</nav>
+			</ul>
+		</div>
+	</div>
 
-	<%= yield %>
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<ul>
+					<li><%= link_to "News & Events", events_path %></li>
+					<li><%= link_to "Tuition Information", tuitions_path %></li>
+					<li><%= link_to "Faculty & Staff", staff_index_path %></li>
+					<li><%= link_to "Forms", forms_path %></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
