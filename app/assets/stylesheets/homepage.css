@@ -1,0 +1,33 @@
+/*DROPDOWN MENU*/
+
+.homepage-dropdown-menu {
+	margin: 60px 0;
+	padding: 40px 0;
+	background-color: #FFFF00;
+}
+
+.outer-list{
+	list-style: none;
+	text-align: center;
+}
+
+.outer-list li {
+	display: inline;
+	margin: 40px;
+}
+
+.inner-list li {
+	text-align: left;
+	margin: 0;
+}
+
+
+/*LOGO*/
+.homepage-logo {
+}
+
+
+/*HOMEPAGE BODY*/
+.homepage-body {
+	display: inline-block;
+}
