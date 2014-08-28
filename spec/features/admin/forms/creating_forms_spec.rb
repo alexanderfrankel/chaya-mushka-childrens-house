@@ -7,7 +7,11 @@ feature "Creating Forms" do
 		sign_in_as!(admin)
 		visit '/'
 		click_link "Admin"
-		click_link "Forms"
+
+		within("#admin-menu") do
+			click_link "Forms"
+		end
+
 		click_link "New Form"
 	end
 

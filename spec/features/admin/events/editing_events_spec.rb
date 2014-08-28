@@ -8,7 +8,11 @@ feature "Editing an event" do
 		sign_in_as!(admin_user)
 		visit '/'
 		click_link "Admin"
-		click_link "News & Events"
+
+		within("#admin-menu") do
+			click_link "News & Events"
+		end
+
 		click_link event.title
 		click_link "Edit Event"
 	end
