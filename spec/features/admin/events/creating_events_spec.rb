@@ -8,7 +8,11 @@ feature "Creating Events" do
 		sign_in_as!(admin_user)
 		visit '/'
 		click_link "Admin"
-		click_link "News & Events"
+
+		within("#admin-menu") do
+			click_link "News & Events"
+		end
+
 		click_link "Add Event"
 	end
 

@@ -1,67 +1,18 @@
-<ul class="homepage-dropdown">
-	<div class="dropdown">
-	  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover CMCH Preschool</a>
-	  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	    <li><a tabindex="-1" href="#">Director's Message</a></li>
-	    <li><a tabindex="-1" href="#">Mission &amp; History</a></li>
-			<li><%= link_to "Faculty & Staff", staff_index_path, tabindex:"-1" %></li>
-	    <li><%= link_to "News & Events", events_path, tabindex:"-1" %></li>
-	    <li class="divider"></li>
-	    <li><a tabindex="-1" href="#">Contact Us</a></li>
-	  </ul>
-	</div>
+<div id="homepage-carousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+  	<div class="carousel-inner">
+  	  <div class="active item"><%= image_tag("monkey.jpg", size:"160") %></div>
+  	  <div class="item"><%= image_tag("bird_photo.jpg", size:"160") %></div>
+  	  <div class="item"><%= image_tag("lala.jpg", size:"160") %></div>
+  	</div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#homepage-carousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#homepage-carousel" data-slide="next">&rsaquo;</a>
+</div>
 
-	<div class="dropdown">
-	  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admissions</a>
-	  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	    <li><a tabindex="-1" href="#">Visit the School</a></li>
-	    <li><a tabindex="-1" href="#">Applying</a></li>
-			<li><%= link_to "Tuition Information", tuitions_path, tabindex:"-1" %></li>
-	    <li><a tabindex="-1" href="#">Financial Aid</a></li>
-	  </ul>
-	</div>
-
-	<div class="dropdown">
-	  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
-	  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	    <li><a tabindex="-1" href="#">Judaics</a></li>
-	    <li><a tabindex="-1" href="#">Montessori</a></li>
-	  </ul>
-	</div>
-
-	<div class="dropdown">
-	  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Support CMCH Preschool</a>
-	  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	    <li><a tabindex="-1" href="#">Alef Fund</a></li>
-	    <li><a tabindex="-1" href="#">Ways To Give</a></li>
-	    <li><a tabindex="-1" href="#">Donate Online</a></li>
-	    <li><a tabindex="-1" href="#">Volunteer</a></li>
-	    <li><a tabindex="-1" href="#">PTA</a></li>
-	    <li><a tabindex="-1" href="#">Grandparents</a></li>
-	    <li><a tabindex="-1" href="#">Alumni</a></li>
-	  </ul>
-	</div>
-
-	<div class="dropdown">
-	  <a class="dropdown-toggle" data-toggle="dropdown" href="#">My CMCH</a>
-	  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	  	<li><%= link_to "Forms", forms_path, tabindex:"-1" %></li>
-	    <li><a tabindex="-1" href="#">Log In</a></li>
-	  </ul>
-	</div>
-
-	<div class="dropdown">
-	  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Links</a>
-	  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	    <li><a tabindex="-1" href="#">CMCH Elementary</a></li>
-	    <li><a tabindex="-1" href="#">CMCH Summer Camp</a></li>
-	    <li><a tabindex="-1" href="#">Chabad of Georgia</a></li>
-	    <li><a tabindex="-1" href="#">Shutterfly</a></li>
-	  </ul>
-	</div>
-</ul>
-
-<%= image_tag("preschool_logo.png", size:"160") %>
-
-<h2>WELCOME TO CHAYA MUSHKA</h2>
-<h2>...much love my fellow jewish(men)/jewish(women) *__*</h2>
+<div class="homepage-body">
+	<h2>WELCOME TO CHAYA MUSHKA</h2>
+	<h2>...much love my fellow jewish(men)/jewish(women) *__*</h2>
+</div>

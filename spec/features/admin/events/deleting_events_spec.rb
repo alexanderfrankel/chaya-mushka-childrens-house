@@ -7,8 +7,12 @@ feature "Deleting events" do
 	before do
 		sign_in_as!(admin_user)
 		visit '/'
+
 		click_link "Admin"
-		click_link "News & Events"
+
+		within("#admin-menu") do
+			click_link "News & Events"
+		end
 	end
 
 	scenario "Deleting an event" do

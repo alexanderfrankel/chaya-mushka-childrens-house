@@ -8,7 +8,10 @@ feature "Deleting forms" do
 		sign_in_as!(admin_user)
 		visit '/'
 		click_link "Admin"
-		click_link "Forms"
+
+		within('#admin-menu') do
+			click_link "Forms"
+		end
 	end
 
 	scenario "Deleting a form" do
