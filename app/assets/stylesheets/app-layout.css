@@ -1,3 +1,10 @@
 body {
-	padding: 80px;
+}
+
+.main-content {
+	padding: 220px;
+	background: #3366FF;
+}
+
+.top-header {
 }

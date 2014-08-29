@@ -1,7 +1,78 @@
-.top-header {
-	margin: 0px 0 20px 0;
+.all-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	height: 200px;
+	background: #0000FF;
 }
 
-.brand-nav-menu {
-	margin-left: 20px;
+/*LOGO---------------*/
+
+.nav-logo {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.nav-logo img {
+	display: block;
+	margin: auto;
+}
+
+/*MAIN NAV-----------*/
+
+.nav-items-main {
+	display: inline;
+	height: 100%;
+	float: left;
+	margin: 0;
+	width: 60%
+}
+
+.nav-items-main li {
+	display: inline;
+	padding: 0 9px;
+}
+
+.nav-items-main li a {
+	color: #FFFFFF;
+}
+
+.nav-items-main li a:hover {
+	text-decoration: none;
+}
+
+/*DROPDOWN NAV-------*/
+
+.dropdown-menu li {
+	padding: 2px 0;
+}
+
+.dropdown-menu li a{
+	color: #000000;
+}
+
+/*USER NAV-----------*/
+
+.nav-items-user {
+	display: inline;
+	height: 100%;
+	float: right;
+	margin: 0;
+}
+
+.nav-items-user li {
+	display: inline;
+	float: left;
+	padding: 0 9px;
+}
+
+.nav-items-user li a {
+	color: #FFFFFF;
+}
+
+.nav-items-user li a:hover {
+	text-decoration: none;
 }
