@@ -27,24 +27,33 @@
 	display: inline;
 	height: 100%;
 	float: left;
+	width: 60%;
 	margin: 0;
-	width: 60%
 }
 
-.nav-items-main li {
+.nav-items-main-list {
+	position: absolute;
+	bottom: 20px;
+	margin: 0;
+}
+
+.nav-items-main-list li {
 	display: inline;
 	padding: 0 9px;
 }
 
-.nav-items-main li a {
+.nav-items-main-list li a {
 	color: #FFFFFF;
 }
 
-.nav-items-main li a:hover {
+.nav-items-main-list li a:hover {
 	text-decoration: none;
 }
 
 /*DROPDOWN NAV-------*/
+
+.dropdown-menu {
+}
 
 .dropdown-menu li {
 	padding: 2px 0;
@@ -59,20 +68,28 @@
 .nav-items-user {
 	display: inline;
 	height: 100%;
-	float: right;
+	float: left;
+	margin: 0;
+	width: 20%
+}
+
+.nav-items-user-list {
+	position: absolute;
+	bottom: 20px;
+	right: 0;
 	margin: 0;
 }
 
-.nav-items-user li {
+.nav-items-user-list li {
 	display: inline;
 	float: left;
 	padding: 0 9px;
 }
 
-.nav-items-user li a {
+.nav-items-user-list li a {
 	color: #FFFFFF;
 }
 
-.nav-items-user li a:hover {
+.nav-items-user-list li a:hover {
 	text-decoration: none;
 }
