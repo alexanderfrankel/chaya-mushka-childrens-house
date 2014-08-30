@@ -21,13 +21,6 @@
 	display: block;
 }
 
-/*MESSAGE------------*/
-
-/*.nav-message {
-	position: absolute;
-	color: #FFFFFF;
-}*/
-
 /*MAIN NAV-----------*/
 
 .nav-items-main {
@@ -41,11 +34,11 @@
 
 .nav-items-main-list {
 	width: 100%;
-	margin: 140px auto 0 auto;
+	margin: 60px auto 0 auto;
 	text-align: center;
 }
 
-.nav-items-main-list li {
+.nav-items-main-list-item {
 	display: inline;
 	padding: 0 10px;
 	margin: 0 3px;
@@ -53,17 +46,28 @@
 	border-radius: 5px;
 }
 
-.nav-items-main-list li:hover {
+.nav-items-main-list-item:hover {
 	background: #FFFFFF;
 }
 
-.nav-items-main-list li a {
+.nav-items-main-list-item a {
 	color: #FFFFFF;
 }
 
-.nav-items-main-list li a:hover {
+.nav-items-main-list-item a:hover {
 	text-decoration: none;
 	color: #0000FF;
+}
+
+/*MESSAGE------------*/
+
+.nav-message {
+	width: 100%;
+	margin: 60px auto 0 auto;
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 50px;
+	color: #FFFFFF;
 }
 
 /*DROPDOWN NAV-------*/

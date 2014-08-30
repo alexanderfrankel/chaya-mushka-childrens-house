@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -21,9 +22,9 @@
 		</div>
 
 		<div class="nav-items-main">
-			<!-- <span class="nav-message">Welcome!</span> -->
+			<div class="nav-message">Chaya Mushka Children's House</div>
 			<ul class="nav-items-main-list">
-				<li class="dropdown">
+				<li class="dropdown nav-items-main-list-item">
 				  <a class="dropdown-menutoggle" data-toggle="dropdown" href="#">Discover CMCH Preschool</a>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				    <li><a tabindex="-1" href="#">Director's Message</a></li>
@@ -34,7 +35,7 @@
 				  </ul>
 				</li>
 
-				<li class="dropdown">
+				<li class="dropdown nav-items-main-list-item">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admissions</a>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				    <li><a tabindex="-1" href="#">Visit the School</a></li>
@@ -44,7 +45,7 @@
 				  </ul>
 				</li>
 
-				<li class="dropdown">
+				<li class="dropdown nav-items-main-list-item">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				    <li><a tabindex="-1" href="#">Judaics</a></li>
@@ -52,7 +53,7 @@
 				  </ul>
 				</li>
 
-				<li class="dropdown">
+				<li class="dropdown nav-items-main-list-item">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Support CMCH Preschool</a>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				    <li><a tabindex="-1" href="#">Alef Fund</a></li>
@@ -65,7 +66,7 @@
 				  </ul>
 				</li>
 
-				<li class="dropdown">
+				<li class="dropdown nav-items-main-list-item">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="#">My CMCH</a>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				  	<li><%= link_to "Forms", forms_path, tabindex:"-1" %></li>
@@ -73,7 +74,7 @@
 				  </ul>
 				</li>
 
-				<li class="dropdown">
+				<li class="dropdown nav-items-main-list-item">
 				  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Links</a>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				    <li><a tabindex="-1" href="#">CMCH Elementary</a></li>
