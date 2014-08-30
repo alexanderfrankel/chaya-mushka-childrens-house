@@ -17,10 +17,11 @@
 
 	<div class="all-nav">
 		<div class="nav-logo">
-			<a href="/"><%= image_tag("preschool_logo.png", size:"140") %></a>
+			<a href="/"><%= image_tag("preschool_logo.png", size:"110") %></a>
 		</div>
 
 		<div class="nav-items-main">
+			<!-- <span class="nav-message">Welcome!</span> -->
 			<ul class="nav-items-main-list">
 				<li class="dropdown">
 				  <a class="dropdown-menutoggle" data-toggle="dropdown" href="#">Discover CMCH Preschool</a>
@@ -109,9 +110,17 @@
 
 	</div>
 
+
+
 	<div class="main-content">
 		<%= yield %>
 	</div>
+
+	<div class="main-footer">
+		Chaya Mushka
+	</div>
+
+
 
 </body>
 </html>
