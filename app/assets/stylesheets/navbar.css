@@ -40,21 +40,18 @@
 
 .nav-items-main-list-item {
 	display: inline;
-	padding: 0 10px;
 	margin: 0 3px;
-	border: 1px solid white;
-	border-radius: 5px;
-}
-
-.nav-items-main-list-item:hover {
-	background: #FFFFFF;
 }
 
 .nav-items-main-list-item a {
 	color: #FFFFFF;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 4px 9px;
 }
 
 .nav-items-main-list-item a:hover {
+	background: #FFFFFF;
 	text-decoration: none;
 	color: #0000FF;
 }
@@ -101,21 +98,19 @@
 
 .nav-items-user-list li {
 	display: inline;
-	padding: 0 9px;
+	padding: 4px 9px;
 	margin: 0 3px;
-	border: 1px solid white;
-	border-radius: 5px;
-}
-
-.nav-items-user-list li:hover {
-	background: #FFFFFF;
 }
 
 .nav-items-user-list li a {
 	color: #FFFFFF;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 4px 9px;
 }
 
 .nav-items-user-list li a:hover {
+	background: #FFFFFF;
 	text-decoration: none;
 	color: #0000FF;
 }
