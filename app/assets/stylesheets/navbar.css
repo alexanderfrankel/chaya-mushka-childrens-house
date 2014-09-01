@@ -12,7 +12,7 @@
 
 .nav-logo {
 	height: 100%;
-	width: 19%;
+	width: 20%;
 	float: left;
 }
 
@@ -38,14 +38,14 @@
 	display: inline;
 	height: 100%;
 	float: left;
-	width: 62%;
+	width: 60%;
 	margin: 0;
 	/*border: 1px solid green;*/
 }
 
 .nav-items-main-list {
 	width: 100%;
-	margin: 60px auto 0 auto;
+	margin: 56px auto 0 auto;
 	text-align: center;
 }
 
@@ -87,13 +87,13 @@
 	display: inline;
 	height: 100%;
 	float: left;
-	width: 19%;
+	width: 20%;
 	margin: 0;
 }
 
 .nav-items-user-list {
 	width: 100%;
-	margin: 140px auto 0 auto;
+	margin: 136px auto 0 auto;
 	text-align: center;
 }
 
