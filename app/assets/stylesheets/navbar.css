@@ -21,6 +21,17 @@
 	display: block;
 }
 
+/*MESSAGE------------*/
+
+.nav-message {
+	width: 100%;
+	margin: 60px auto 0 auto;
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 50px;
+	color: #FFFFFF;
+}
+
 /*MAIN NAV-----------*/
 
 .nav-items-main {
@@ -56,16 +67,6 @@
 	color: #0000FF;
 }
 
-/*MESSAGE------------*/
-
-.nav-message {
-	width: 100%;
-	margin: 60px auto 0 auto;
-	text-align: center;
-	font-family: 'Architects Daughter', cursive;
-	font-size: 50px;
-	color: #FFFFFF;
-}
 
 /*DROPDOWN NAV-------*/
 
