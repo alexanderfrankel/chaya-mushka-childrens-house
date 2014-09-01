@@ -12,7 +12,7 @@
 
 .nav-logo {
 	height: 100%;
-	width: 18%;
+	width: 19%;
 	float: left;
 }
 
@@ -38,7 +38,7 @@
 	display: inline;
 	height: 100%;
 	float: left;
-	width: 64%;
+	width: 62%;
 	margin: 0;
 	/*border: 1px solid green;*/
 }
@@ -87,7 +87,7 @@
 	display: inline;
 	height: 100%;
 	float: left;
-	width: 18%;
+	width: 19%;
 	margin: 0;
 }
 
@@ -99,7 +99,6 @@
 
 .nav-items-user-list li {
 	display: inline;
-	padding: 4px 9px;
 	margin: 0 3px;
 }
 
