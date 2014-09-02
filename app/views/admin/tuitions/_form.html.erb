@@ -29,9 +29,9 @@
 	</p>
 
 	<% if @tuition.new_record? %>
-		<%= f.submit "Save" %>
+		<%= f.submit "Save", class:"btn" %>
 	<% else %>
-		<%= f.submit "Update" %>
+		<%= f.submit "Update", class:"btn" %>
 	<% end %>
 
 <% end %>
