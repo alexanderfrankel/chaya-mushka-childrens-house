@@ -1,4 +1,7 @@
-$( document ).ready(function() {
-	homepageCarousel();
-	navDropdown();
-});
+var ready = function() {
+  homepageCarousel();
+  navDropdown();
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
