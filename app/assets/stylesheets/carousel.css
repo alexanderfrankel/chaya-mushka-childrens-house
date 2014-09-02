@@ -1,0 +1,17 @@
+.homepage-carousel {
+	height: 200px;
+	border: 1px solid red;
+}
+
+.carousel-item {
+
+}
+
+.carousel-item h3 {
+	color: #FFFFFF;
+	background: #3300CC;
+	width: 180px;
+	height: 180px;
+	margin: 10px auto;
+	text-align: center;
+}
