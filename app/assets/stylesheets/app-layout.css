@@ -1,0 +1,35 @@
+html, body {
+	background: #6666FF;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+.main-content {
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 220px 0px 40px 0px;
+	/*border: 1px solid red;*/
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+	.main-content {
+		width: 68%;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.main-content {
+		width: 95%;
+	}
+
+}

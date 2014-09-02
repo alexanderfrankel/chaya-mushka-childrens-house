@@ -35,8 +35,8 @@
 	</p>
 
 	<% if @form.new_record? %>
-		<%= f.submit "Add Form" %>
+		<%= f.submit "Add Form", class:"btn" %>
 	<% else %>
-		<%= f.submit "Update Form" %>
+		<%= f.submit "Update Form", class:"btn" %>
 	<% end %>
 <% end %>

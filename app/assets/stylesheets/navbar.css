@@ -1,0 +1,116 @@
+.all-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	height: 170px;
+	background: #0000FF;
+}
+
+/*LOGO---------------*/
+
+.nav-logo {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.nav-logo img {
+	margin: 5px auto;
+	display: block;
+}
+
+/*MESSAGE------------*/
+
+.nav-message {
+	width: 100%;
+	margin: 60px auto 0 auto;
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 50px;
+	color: #FFFFFF;
+}
+
+/*MAIN NAV-----------*/
+
+.nav-items-main {
+	display: inline;
+	height: 100%;
+	float: left;
+	width: 60%;
+	margin: 0;
+	/*border: 1px solid green;*/
+}
+
+.nav-items-main-list {
+	width: 100%;
+	margin: 56px auto 0 auto;
+	text-align: center;
+}
+
+.nav-items-main-list-item {
+	display: inline;
+	margin: 0 3px;
+}
+
+.nav-items-main-list-item a {
+	color: #FFFFFF;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 4px 9px;
+}
+
+.nav-items-main-list-item a:hover {
+	background: #FFFFFF;
+	text-decoration: none;
+	color: #0000FF;
+}
+
+
+/*DROPDOWN NAV-------*/
+
+.dropdown-menu {
+}
+
+.dropdown-menu li {
+	padding: 2px 0;
+}
+
+.dropdown-menu li a{
+	color: #000000;
+}
+
+/*USER NAV-----------*/
+
+.nav-items-user {
+	display: inline;
+	height: 100%;
+	float: left;
+	width: 20%;
+	margin: 0;
+}
+
+.nav-items-user-list {
+	width: 100%;
+	margin: 136px auto 0 auto;
+	text-align: center;
+}
+
+.nav-items-user-list li {
+	display: inline;
+	margin: 0 3px;
+}
+
+.nav-items-user-list li a {
+	color: #FFFFFF;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding: 4px 9px;
+}
+
+.nav-items-user-list li a:hover {
+	background: #FFFFFF;
+	text-decoration: none;
+	color: #0000FF;
+}
