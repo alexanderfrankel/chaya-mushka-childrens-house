@@ -1,6 +1,6 @@
 function homepageCarousel() {
 	$('.homepage-carousel').slick({
-		// autoplay: true,
+		autoplay: true,
 		centerMode: true,
 		centerPadding: '60px',
 		slidesToShow: 3,
