@@ -7,7 +7,6 @@ feature "Creating Posts" do
 	before do
 		sign_in_as!(faculty_user)
 		click_link "Faculty"
-		click_link "Posts"
 		click_link "New Post"
 	end
 

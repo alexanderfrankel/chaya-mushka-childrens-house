@@ -9,7 +9,6 @@ feature "Deleting Posts" do
 		sign_in_as!(faculty_user)
 		visit '/'
 		click_link "Faculty"
-		click_link "Posts"
 		click_link "Example Post"
 	end
 

@@ -1,10 +1,5 @@
-<h1 class="top-header">Faculty Lounge</h1>
+<h3>Message Board</h3>
 
-<blockquote>
-	<p>Welcome to Chaya Mushka's Faculty Lounge. Please enjoy your stay.</p>
-	<small>The Administrative Office</small>
-</blockquote>
+<button><%= link_to "New Post", new_faculty_post_path %></button>
 
-<ul>
-	<li><%= link_to "Posts", faculty_posts_path %></li>
-</ul>
+<%= render "table" %>
