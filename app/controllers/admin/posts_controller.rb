@@ -15,7 +15,7 @@ class Admin::PostsController < Admin::BaseController
 
 		if @post.save
 			flash[:notice] = "Post has been created."
-			redirect_to admin_post_path(@post)
+			redirect_to admin_posts_path
 		else
 			flash[:alert] = "Post has not been created."
 			render "new"
@@ -31,7 +31,7 @@ class Admin::PostsController < Admin::BaseController
 	def update
 		if @post.update(post_params)
 			flash[:notice] = "Post has been updated."
-			redirect_to admin_post_path(@post)
+			redirect_to admin_posts_path
 		else
 			flash[:alert] = "Post has not been updated."
 			render "edit"

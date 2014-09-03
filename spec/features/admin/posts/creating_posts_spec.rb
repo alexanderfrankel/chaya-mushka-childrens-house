@@ -16,10 +16,7 @@ feature "Creating Posts" do
 		click_button 'Create Post'
 
 		expect(page).to have_content("Post has been created.")
-
-		within "#post #author" do
-			expect(page).to have_content("Created by #{admin_user.email}")
-		end
+		expect(page).to have_content("Example Post")
 	end
 
 	scenario "can not create a post without a name" do
