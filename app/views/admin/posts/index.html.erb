@@ -1,0 +1,9 @@
+<h1 class="top-header">Posts</h1>
+
+<%= link_to "New Post", new_admin_post_path %>
+
+<ul>
+	<% @posts.each do |post| %>
+		<li><%= link_to post.title, [:admin, post] %></li>
+	<% end %>
+</ul>
