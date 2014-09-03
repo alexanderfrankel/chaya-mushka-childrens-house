@@ -7,7 +7,6 @@ feature "Creating Posts" do
 	before do
 		sign_in_as!(admin_user)
 		click_link "Admin"
-		click_link "Posts"
 		click_link "New Post"
 	end
 

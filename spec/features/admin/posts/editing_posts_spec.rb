@@ -14,7 +14,6 @@ feature "Editing Posts" do
 
 		visit '/'
 		click_link "Admin"
-		click_link "Posts"
 		click_link "Example Post"
 		click_link "Edit Post"
 	end
