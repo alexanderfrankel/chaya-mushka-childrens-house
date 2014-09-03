@@ -2,11 +2,11 @@ require 'spec_helper'
 
 feature "Creating Posts" do
 
-	let(:faculty_user) { create(:faculty_user) }
+	let(:admin_user) { create(:admin_user) }
 
 	before do
-		sign_in_as!(faculty_user)
-		click_link "Faculty"
+		sign_in_as!(admin_user)
+		click_link "Admin"
 		click_link "New Post"
 	end
 
@@ -16,10 +16,7 @@ feature "Creating Posts" do
 		click_button 'Create Post'
 
 		expect(page).to have_content("Post has been created.")
-
-		within "#post #author" do
-			expect(page).to have_content("Created by #{faculty_user.email}")
-		end
+		expect(page).to have_content("Example Post")
 	end
 
 	scenario "can not create a post without a name" do
@@ -36,4 +33,5 @@ feature "Creating Posts" do
 		expect(page).to have_content("Post has not been created.")
 		expect(page).to have_content("Content can't be blank")
 	end
+
 end

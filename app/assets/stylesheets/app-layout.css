@@ -1,5 +1,8 @@
 html, body {
-	background: #6666FF;
+	background-image: url('/assets/linen.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	/*background: #6666FF;*/
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -14,7 +17,7 @@ html, body {
 	width: 60%;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 220px 0px 40px 0px;
+	padding: 200px 0px 40px 0px;
 	/*border: 1px solid red;*/
 }
 
