@@ -14,3 +14,6 @@
 
 #Ignore publicly uploaded files
 public/uploads
+
+#Ignore TODO
+TODO
