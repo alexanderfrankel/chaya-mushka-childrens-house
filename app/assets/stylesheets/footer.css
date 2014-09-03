@@ -10,7 +10,7 @@
 }
 
 .footer-content {
-	width: 60%;
+	width: 70%;
 	height: 100%;
 	margin: 0 auto;
 }
@@ -27,13 +27,39 @@
 	margin: 8px auto;
 }
 
-/*CONTACT INFO-------*/
-
-.contact-info {
-
+.footer-chabad-logo {
+	height: 100%;
+	width: 160px;
+	float: right;
 }
 
-.contact-info p {
+.footer-chabad-logo img {
+	margin: 23px auto;
+}
+
+/*INFO---------------*/
+
+.footer-info {
+	height: 100%;
+	float: left;
+}
+
+.contact-info, .address-info {
+	float: left;
+	margin: 20px 14px;
+}
+
+.contact-info p, .address-info p {
+	margin: 0;
+	font-size: 12px;
 	text-align: left;
-	display: inline-block;
 }
+
+/*SOCIAL MEDIA-------*/
+
+.footer-social-icons {
+	float: left;
+	background: black;
+	list-style: none;
+}
+
