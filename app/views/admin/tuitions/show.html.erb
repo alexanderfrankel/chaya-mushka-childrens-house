@@ -1,6 +1,6 @@
 <h3 class="top-header"><%= @tuition.year %> Tuition Information</h3>
 
-<%= link_to "Edit Tuition Information", edit_admin_tuition_path(@tuition) %>
+<%= link_to "Edit Tuition Information", edit_admin_tuition_path(@tuition), class:"btn" %>
 
 <ul>
 	<li>Amount: $<%= @tuition.amount %></li>

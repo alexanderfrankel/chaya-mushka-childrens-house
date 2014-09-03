@@ -13,6 +13,6 @@
 		</div>
 	<% end %>
 
-	<%= link_to "Edit Form", edit_admin_form_path(@form) %>
-	<%= link_to "Delete Form", admin_form_path(@form), method: :delete, data: { confirm: "Are you sure you want to delete this form?" } %>
+	<%= link_to "Edit Form", edit_admin_form_path(@form), class:"btn" %>
+	<%= link_to "Delete Form", admin_form_path(@form), method: :delete, data: { confirm: "Are you sure you want to delete this form?" }, class:"btn btn-danger" %>
 </div>
