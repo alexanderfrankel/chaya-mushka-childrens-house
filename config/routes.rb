@@ -13,12 +13,12 @@ Rails.application.routes.draw do
 
 	namespace :faculty do
 		root :to => "base#index"
-		resources :posts
+		resources :posts, except: :index
 	end
 
 	namespace :admin do
 		root :to => "base#index"
-		resources :posts
+		resources :posts, except: :index
 		resources :users
 		resources :events
 		resources :forms

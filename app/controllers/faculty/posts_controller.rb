@@ -42,7 +42,7 @@ class Faculty::PostsController < Faculty::BaseController
 		@post.destroy
 
 		flash[:notice] = "Post has been deleted."
-		redirect_to faculty_posts_path
+		redirect_to faculty_root_path
 	end
 
 	private

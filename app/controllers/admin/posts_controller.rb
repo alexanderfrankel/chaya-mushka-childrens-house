@@ -15,7 +15,7 @@ class Admin::PostsController < Admin::BaseController
 
 		if @post.save
 			flash[:notice] = "Post has been created."
-			redirect_to admin_posts_path
+			redirect_to admin_root_path
 		else
 			flash[:alert] = "Post has not been created."
 			render "new"
@@ -31,7 +31,7 @@ class Admin::PostsController < Admin::BaseController
 	def update
 		if @post.update(post_params)
 			flash[:notice] = "Post has been updated."
-			redirect_to admin_posts_path
+			redirect_to admin_root_path
 		else
 			flash[:alert] = "Post has not been updated."
 			render "edit"
@@ -42,7 +42,7 @@ class Admin::PostsController < Admin::BaseController
 		@post.destroy
 
 		flash[:notice] = "Post has been deleted."
-		redirect_to admin_posts_path
+		redirect_to admin_root_path
 	end
 
 	private
@@ -55,6 +55,6 @@ class Admin::PostsController < Admin::BaseController
 		@post = Post.find(params[:id])
 	rescue ActiveRecord::RecordNotFound
 		flash[:alert] = "The post you were looking for could not be found."
-		redirect_to admin_posts_path
+		redirect_to admin_root_path
 	end
 end
