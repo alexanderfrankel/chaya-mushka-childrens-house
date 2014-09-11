@@ -1,6 +1,6 @@
-.main-footer {
+.all-footer {
 	width: 100%;
-	height: 40px;
+	height: 100px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -8,3 +8,58 @@
 	text-align: center;
 	color: white;
 }
+
+.footer-content {
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/*LOGO---------------*/
+
+.footer-preschool-logo {
+	height: 100%;
+	width: 100px;
+	float: left;
+}
+
+.footer-preschool-logo img {
+	margin: 8px auto;
+}
+
+.footer-chabad-logo {
+	height: 100%;
+	width: 160px;
+	float: right;
+}
+
+.footer-chabad-logo img {
+	margin: 23px auto;
+}
+
+/*INFO---------------*/
+
+.footer-info {
+	height: 100%;
+	float: left;
+}
+
+.contact-info, .address-info {
+	float: left;
+	margin: 20px 14px;
+}
+
+.contact-info p, .address-info p {
+	margin: 0;
+	font-size: 12px;
+	text-align: left;
+}
+
+/*SOCIAL MEDIA-------*/
+
+.footer-social-icons {
+	float: left;
+	background: black;
+	list-style: none;
+}
+

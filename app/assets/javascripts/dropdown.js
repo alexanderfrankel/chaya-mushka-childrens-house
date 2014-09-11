@@ -1,5 +1,5 @@
 function navDropdown() {
-	$('.dropdown-toggle').mouseenter(function(){
+	$('.dropdown').mouseenter(function(){
 		$(this).dropdown('toggle');
-		})
+	})
 };
