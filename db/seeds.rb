@@ -4,15 +4,13 @@ parent = User.create(first_name: "alex",
 										 last_name: "frankel",
 										 email: "alexxander.frankel@gmail.com",
 										 password: "password",
-										 password_confirmation: "password",
-										 shutterfly_url: "does not exist")
+										 password_confirmation: "password")
 
 faculty = User.create(first_name: "alex",
 											last_name: "frank",
 											email: "alex.frankel@gmail.com",
 											password: "password",
 											password_confirmation: "password",
-											shutterfly_url: "does not exist",
 											faculty: true)
 
 admin = User.create(first_name: "alex",
@@ -20,7 +18,6 @@ admin = User.create(first_name: "alex",
 										email: "alex.lewis@gmail.com",
 										password: "password",
 										password_confirmation: "password",
-										shutterfly_url: "does not exist",
 										faculty: true,
 										admin: true)
 

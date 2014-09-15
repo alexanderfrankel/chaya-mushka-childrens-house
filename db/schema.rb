@@ -64,7 +64,6 @@ ActiveRecord::Schema.define(version: 20140821212549) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "shutterfly_url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "faculty",          default: false
