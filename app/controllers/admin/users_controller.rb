@@ -52,13 +52,6 @@ class Admin::UsersController < Admin::BaseController
 		redirect_to admin_users_path
 	end
 
-	def verify
-		@user.verified = true
-		@user.save
-		flash[:notice] = "User has been verified. A notification email has been sent to #{@user.email}."
-		redirect_to admin_users_path
-	end
-
 	private
 
 	def set_user

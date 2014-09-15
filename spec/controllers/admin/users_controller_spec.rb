@@ -12,8 +12,7 @@ describe Admin::UsersController do
 		  create: :post,
 		  edit: :get,
 		  update: :put,
-		  destroy: :delete,
-		  verify: :get }.each do |action, method|
+		  destroy: :delete }.each do |action, method|
 		  	it "cannot access the #{action} action" do
 		  		send(method, action, :id => create(:user))
 		  		expect(response).to redirect_to(root_path)
@@ -29,8 +28,7 @@ describe Admin::UsersController do
 		  create: :post,
 		  edit: :get,
 		  update: :put,
-		  destroy: :delete,
-		  verify: :get }.each do |action, method|
+		  destroy: :delete }.each do |action, method|
 		  	it "cannot access the #{action} action" do
 		  		send(method, action, :id => create(:user))
 		  		expect(response).to redirect_to(root_path)

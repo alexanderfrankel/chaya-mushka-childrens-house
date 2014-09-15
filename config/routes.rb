@@ -19,10 +19,12 @@ Rails.application.routes.draw do
 	namespace :admin do
 		root :to => "base#index"
 		resources :posts, except: :index
-		resources :users
+		resources :users do
+			get "/verify", to: "user_verifications#verify_user"
+		end
 		resources :events
 		resources :forms
 		resources :tuitions, except: :destroy
-		get "users/:id/verify", to: "users#verify", as: "user_verify"
+
 	end
 end
