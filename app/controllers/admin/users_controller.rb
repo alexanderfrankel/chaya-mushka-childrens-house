@@ -1,5 +1,5 @@
 class Admin::UsersController < Admin::BaseController
-	before_action :set_user, only: [:show, :edit, :update, :destroy]
+	before_action :set_user, only: [:show, :edit, :update, :destroy, :verify]
 
 	def index
 		@unverified_users = User.find_unverified
@@ -49,6 +49,13 @@ class Admin::UsersController < Admin::BaseController
 			flash[:notice] = "User has been deleted."
 		end
 
+		redirect_to admin_users_path
+	end
+
+	def verify
+		@user.verified = true
+		@user.save
+		flash[:notice] = "User has been verified. A notification email has been sent to #{@user.email}."
 		redirect_to admin_users_path
 	end
 

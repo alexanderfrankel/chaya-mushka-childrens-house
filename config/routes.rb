@@ -23,5 +23,6 @@ Rails.application.routes.draw do
 		resources :events
 		resources :forms
 		resources :tuitions, except: :destroy
+		get "users/:id/verify", to: "users#verify", as: "user_verify"
 	end
 end
