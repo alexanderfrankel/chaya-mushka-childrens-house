@@ -3,7 +3,9 @@ class Admin::UsersController < Admin::BaseController
 
 	def index
 		@unverified_users = User.find_unverified
-		@users = User.order(:email)
+		@admin_users = User.find_admin
+		@faculty_users = User.find_faculty
+		@parent_users = User.find_parent
 	end
 
 	def new

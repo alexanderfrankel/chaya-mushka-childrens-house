@@ -25,6 +25,18 @@ class User < ActiveRecord::Base
 	end
 
 	def self.find_unverified
-		User.where(verified?: false)
+		User.where("verified = ?", false)
+	end
+
+	def self.find_admin
+		User.where("admin = ? AND verified = ?", true, true)
+	end
+
+	def self.find_faculty
+		User.where("faculty = ? AND admin = ? AND verified = ?", true, false, true)
+	end
+
+	def self.find_parent
+		User.where("faculty = ? AND verified = ?", false, true)
 	end
 end

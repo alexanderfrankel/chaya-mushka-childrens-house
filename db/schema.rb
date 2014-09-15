@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20140915191208) do
     t.boolean  "faculty",          default: false
     t.boolean  "admin",            default: false
     t.integer  "administrator_id"
-    t.boolean  "verified?",        default: false
+    t.boolean  "verified",         default: false
   end
 
   add_index "users", ["administrator_id"], name: "index_users_on_administrator_id", using: :btree
