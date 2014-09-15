@@ -33,7 +33,7 @@ feature "Creating Users" do
 		click_button "Create User"
 
 		expect(page).to have_content("User has been created.")
-		within("#users") do
+		within("#unverified_users") do
 			expect(page).to have_content("New, Admin (Admin)")
 		end
 	end
@@ -61,7 +61,7 @@ feature "Creating Users" do
 		click_button "Create User"
 
 		expect(page).to have_content("User has been created.")
-		within("#users") do
+		within("#unverified_users") do
 			expect(page).to have_content("New, Faculty (Faculty)")
 		end
 	end

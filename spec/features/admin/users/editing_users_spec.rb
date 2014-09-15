@@ -32,7 +32,7 @@ feature "Editing a user" do
 
 		expect(page).to have_content("User has been updated.")
 
-		within("#users") do
+		within("#admin_users") do
 			expect(page).to have_content("#{user.last_name}, #{user.first_name} (Admin)")
 		end
 	end
@@ -43,7 +43,7 @@ feature "Editing a user" do
 
 		expect(page).to have_content("User has been updated.")
 
-		within("#users") do
+		within("#faculty_users") do
 			expect(page).to have_content("#{user.last_name}, #{user.first_name} (Faculty)")
 		end
 	end

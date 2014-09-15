@@ -33,7 +33,7 @@ feature "Viewing Users" do
 	end
 
 	scenario "View all parent users" do
-		within("#parent_users") do
+		within("#users") do
 			expect(page).to have_content("#{parent_user.last_name}, #{parent_user.first_name}")
 		end
 	end
