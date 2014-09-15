@@ -1,6 +1,22 @@
 class UsersController < ApplicationController
-	before_action :set_user
-	before_action :authorize_user!
+	before_action :set_user, only: [:show, :edit, :update]
+	before_action :authorize_user!, only: [:show, :edit, :update]
+
+	def new
+		@user = User.new
+	end
+
+	def create
+		@user = User.new(user_params)
+
+		if @user.save
+			flash[:notice] = "Successful sign up. Please wait for admin verification. You will receive an email when verification is complete!"
+			redirect_to root_path
+		else
+			flash[:alert] = "Unsuccessful sign up. Please try again."
+			render "new"
+		end
+	end
 
 	def show
 	end
