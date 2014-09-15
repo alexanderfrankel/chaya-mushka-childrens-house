@@ -1,7 +1,5 @@
-<h1 class="top-header">Tuition Information</h1>
+<h1 class="top-header"><%= @tuition.year %> Tuition Information</h1>
 
-<ul id="tuitions">
-	<% @tuitions.each do |tuition| %>
-		<li><%= link_to tuition, tuition %></li>
-	<% end %>
+<ul>
+	<li>Amount: $<%= @tuition.amount %></li>
 </ul>

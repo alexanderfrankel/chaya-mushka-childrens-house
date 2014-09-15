@@ -8,18 +8,8 @@ feature "Viewing Tuitions" do
 		click_link "Tuition Information"
 	end
 
-	scenario "all tuitions" do
-		expect(page).to have_content("Tuition Information")
-
-		within("#tuitions") do
-			expect(page).to have_content("#{tuition.year} (Current)")
-		end
-	end
-
-	scenario "for an individual year" do
-		click_link tuition.year
-
+	scenario "current tuition" do
 		expect(page).to have_content(tuition.year)
-		expect(current_url).to eql(tuition_url(tuition))
+		expect(current_url).to eql(tuitions_url)
 	end
 end
