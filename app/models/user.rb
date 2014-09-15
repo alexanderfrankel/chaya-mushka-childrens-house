@@ -23,4 +23,8 @@ class User < ActiveRecord::Base
 			"#{last_name}, #{first_name}"
 		end
 	end
+
+	def self.find_unverified
+		User.where(verified?: false)
+	end
 end

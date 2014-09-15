@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821212549) do
+ActiveRecord::Schema.define(version: 20140915191208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20140821212549) do
     t.boolean  "faculty",          default: false
     t.boolean  "admin",            default: false
     t.integer  "administrator_id"
+    t.boolean  "verified?",        default: false
   end
 
   add_index "users", ["administrator_id"], name: "index_users_on_administrator_id", using: :btree

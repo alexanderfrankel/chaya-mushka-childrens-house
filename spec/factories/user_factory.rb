@@ -7,6 +7,7 @@ FactoryGirl.define do
 		email { generate(:email) }
 		password "password"
 		password_confirmation "password"
+		verified? true
 
 		factory :faculty_user do
 			first_name "Fack"
@@ -19,6 +20,12 @@ FactoryGirl.define do
 			last_name "Min"
 			faculty true
 			admin true
+		end
+
+		factory :unverified_user do
+			first_name "Unverified"
+			last_name "User"
+			verified? false
 		end
 	end
 end

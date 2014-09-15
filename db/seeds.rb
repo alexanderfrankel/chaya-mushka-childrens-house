@@ -4,14 +4,16 @@ parent = User.create(first_name: "alex",
 										 last_name: "frankel",
 										 email: "alexxander.frankel@gmail.com",
 										 password: "password",
-										 password_confirmation: "password")
+										 password_confirmation: "password",
+										 verified?: true)
 
 faculty = User.create(first_name: "alex",
 											last_name: "frank",
 											email: "alex.frankel@gmail.com",
 											password: "password",
 											password_confirmation: "password",
-											faculty: true)
+											faculty: true,
+											verified?: true)
 
 admin = User.create(first_name: "alex",
 										last_name: "lewis",
@@ -19,7 +21,15 @@ admin = User.create(first_name: "alex",
 										password: "password",
 										password_confirmation: "password",
 										faculty: true,
-										admin: true)
+										admin: true,
+										verified?: true)
+
+unverified = User.create(first_name: "al",
+												 last_name: "frab",
+												 email: "alf@gmail.com",
+												 password: "password",
+												 password_confirmation: "password",
+												 verified?: false)
 
 # POSTS -------------------------------------------
 

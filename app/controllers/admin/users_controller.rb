@@ -2,6 +2,7 @@ class Admin::UsersController < Admin::BaseController
 	before_action :set_user, only: [:show, :edit, :update, :destroy]
 
 	def index
+		@unverified_users = User.find_unverified
 		@users = User.order(:email)
 	end
 
