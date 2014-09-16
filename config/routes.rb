@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 		root :to => "base#index"
 		resources :posts, except: :index
 		resources :users do
-			get "/verify", to: "user_verifications#verify_user"
+			get "/verify", to: "verifications#verify_user"
 		end
 		resources :events
 		resources :forms

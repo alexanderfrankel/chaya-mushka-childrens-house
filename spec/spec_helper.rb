@@ -62,4 +62,7 @@ RSpec.configure do |config|
   config.expose_current_running_example_as :example
 
   config.include FactoryGirl::Syntax::Methods
+
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 end
