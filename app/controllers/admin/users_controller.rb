@@ -1,8 +1,11 @@
 class Admin::UsersController < Admin::BaseController
-	before_action :set_user, only: [:show, :edit, :update, :destroy]
+	before_action :set_user, only: [:show, :edit, :update, :destroy, :verify]
 
 	def index
-		@users = User.order(:email)
+		@unverified_users = User.find_unverified
+		@admin_users = User.find_admin
+		@faculty_users = User.find_faculty
+		@parent_users = User.find_parent
 	end
 
 	def new

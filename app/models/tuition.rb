@@ -12,4 +12,8 @@ class Tuition < ActiveRecord::Base
 			"#{year}"
 		end
 	end
+
+	def self.is_current
+		Tuition.where(current: true).first
+	end
 end

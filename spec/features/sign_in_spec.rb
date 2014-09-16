@@ -10,7 +10,7 @@ feature 'Signing In' do
 		fill_in 'Password', with: user.password
 		click_button "Sign In"
 
-		expect(page).to have_content ("Signed in successfully.")
+		expect(page).to have_content("Signed in successfully.")
 	end
 
 	scenario 'Signin in via form with invalid password' do
@@ -31,5 +31,17 @@ feature 'Signing In' do
 		visit '/'
 		click_link 'Sign Out'
 		expect(page).to have_content("Signed out successfully.")
+	end
+
+	scenario "Sign In without verification" do
+		user = create(:unverified_user)
+
+		visit '/'
+		click_link "Sign In"
+		fill_in 'Email', with: user.email
+		fill_in 'Password', with: user.password
+		click_button "Sign In"
+
+		expect(page).to have_content("Apologies. Your account has not yet been verified by the administrative office. Please wait for verification email.")
 	end
 end

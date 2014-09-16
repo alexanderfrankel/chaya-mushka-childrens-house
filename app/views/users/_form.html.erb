@@ -38,6 +38,10 @@
 		<%= f.password_field :password_confirmation %>
 	</p>
 
-	<%= f.submit "Update Profile", class:"btn" %>
+	<% if @user.new_record? %>
+		<%= f.submit "Sign Up", class:"btn" %>
+	<% else %>
+		<%= f.submit "Update Profile", class:"btn" %>
+	<% end %>
 
 <% end %>

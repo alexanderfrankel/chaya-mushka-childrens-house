@@ -5,24 +5,31 @@ parent = User.create(first_name: "alex",
 										 email: "alexxander.frankel@gmail.com",
 										 password: "password",
 										 password_confirmation: "password",
-										 shutterfly_url: "does not exist")
+										 verified: true)
 
 faculty = User.create(first_name: "alex",
 											last_name: "frank",
 											email: "alex.frankel@gmail.com",
 											password: "password",
 											password_confirmation: "password",
-											shutterfly_url: "does not exist",
-											faculty: true)
+											faculty: true,
+											verified: true)
 
 admin = User.create(first_name: "alex",
 										last_name: "lewis",
 										email: "alex.lewis@gmail.com",
 										password: "password",
 										password_confirmation: "password",
-										shutterfly_url: "does not exist",
 										faculty: true,
-										admin: true)
+										admin: true,
+										verified: true)
+
+unverified = User.create(first_name: "al",
+												 last_name: "frab",
+												 email: "alf@gmail.com",
+												 password: "password",
+												 password_confirmation: "password",
+												 verified: false)
 
 # POSTS -------------------------------------------
 

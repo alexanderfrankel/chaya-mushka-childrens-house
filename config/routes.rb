@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 	post "/signin", to: "sessions#create"
 	delete "/signout", to: "sessions#destroy", as: "signout"
 
-	resources :users, only: [:edit, :update, :show]
+	resources :users, only: [:new, :create, :edit, :update, :show]
 	resources :events, only: [:index, :show]
-	resources :tuitions, only: [:index, :show]
+	resources :tuitions, only: :index
 	resources :staff, only: [:index, :show]
 	resources :forms, only: [:index, :show]
 
@@ -19,9 +19,12 @@ Rails.application.routes.draw do
 	namespace :admin do
 		root :to => "base#index"
 		resources :posts, except: :index
-		resources :users
+		resources :users do
+			get "/verify", to: "verifications#verify_user"
+		end
 		resources :events
 		resources :forms
 		resources :tuitions, except: :destroy
+
 	end
 end

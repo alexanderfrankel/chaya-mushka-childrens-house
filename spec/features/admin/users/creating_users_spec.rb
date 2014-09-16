@@ -17,7 +17,6 @@ feature "Creating Users" do
 		fill_in "Email", with: "newton@new.com"
 		fill_in "Password", with: "password"
 		fill_in "Password Confirmation", with: "password"
-		fill_in "Shutterfly URL", with: "www.shutterfuly.com"
 		click_button "Create User"
 
 		expect(page).to have_content("User has been created.")
@@ -34,7 +33,7 @@ feature "Creating Users" do
 		click_button "Create User"
 
 		expect(page).to have_content("User has been created.")
-		within("#users") do
+		within("#unverified_users") do
 			expect(page).to have_content("New, Admin (Admin)")
 		end
 	end
@@ -62,7 +61,7 @@ feature "Creating Users" do
 		click_button "Create User"
 
 		expect(page).to have_content("User has been created.")
-		within("#users") do
+		within("#unverified_users") do
 			expect(page).to have_content("New, Faculty (Faculty)")
 		end
 	end
