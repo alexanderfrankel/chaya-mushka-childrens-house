@@ -34,8 +34,11 @@ gem 'cancan', '~> 1.6.10'
 
 gem 'carrierwave', '0.8.0'
 
+gem 'mime', '0.3.0'
+
 group :test, :development do
 	gem 'rspec-rails', "~> 2.14"
+	gem 'gmail', "~> 0.4.0"
 end
 
 group :test do

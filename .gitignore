@@ -17,3 +17,6 @@ public/uploads
 
 #Ignore TODO
 TODO
+
+#Ignore Mailer config
+config/initializers/mail.rb
