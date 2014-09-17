@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 	post "/signin", to: "sessions#create"
 	delete "/signout", to: "sessions#destroy", as: "signout"
 
+	resources :password_resets, only: [:new, :create, :edit, :update]
+
 	resources :users, only: [:new, :create, :edit, :update, :show]
 	resources :events, only: [:index, :show]
 	resources :tuitions, only: :index
