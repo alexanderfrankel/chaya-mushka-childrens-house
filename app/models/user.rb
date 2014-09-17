@@ -20,7 +20,13 @@ class User < ActiveRecord::Base
 		generate_token(:password_reset_token)
 		self.password_reset_sent_at = Time.zone.now
 		save!
-		Notifier.password_reset(self).deliver
+		UserMailer.password_reset(self).deliver
+	end
+
+	def verify_user
+		self.verified = true
+		save!
+		UserMailer.user_verified(self).deliver
 	end
 
 	def admin_user_must_also_be_a_faculty_user

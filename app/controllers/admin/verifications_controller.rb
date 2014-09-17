@@ -1,10 +1,8 @@
 class Admin::VerificationsController < Admin::BaseController
 	before_action :set_user
 
-	def verify_user
-		@user.verified = true
-		@user.save
-		Notifier.user_verified(@user).deliver
+	def new
+		@user.verify_user
 		flash[:notice] = "User has been verified. A notification email has been sent to #{@user.email}."
 		redirect_to admin_users_path
 	end
