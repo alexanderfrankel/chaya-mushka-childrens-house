@@ -7,9 +7,12 @@ class SessionsController < ApplicationController
 	def create
 		user = User.where(:email => params[:signin][:email]).first
 		if user && user.authenticate(params[:signin][:password])
-			session[:user_id] = user.id
+			if params[:remember_me]
+				cookies.permanent[:auth_token] = user.auth_token
+			else
+				cookies[:auth_token] = user.auth_token
+			end
 			flash[:notice] = "Signed in successfully."
-
 			redirect_to root_url
 		else
 			flash[:error] = "Sorry. Your email or password is invalid."
@@ -18,7 +21,7 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
-		session[:user_id] = nil
+		cookies.delete(:auth_token)
 		flash[:notice] = "Signed out successfully."
 
 		redirect_to root_url
