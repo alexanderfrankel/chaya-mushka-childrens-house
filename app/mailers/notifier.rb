@@ -1,5 +1,6 @@
 class Notifier < ActionMailer::Base
-	default from: "admin@chayamushka.com"
+	from_address = ActionMailer::Base.smtp_settings[:user_name]
+	default from: "Chaya Mushka App <#{from_address}>"
 
 	def user_verified(user)
 		@user = user
