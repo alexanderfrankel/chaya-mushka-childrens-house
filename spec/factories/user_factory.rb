@@ -27,5 +27,10 @@ FactoryGirl.define do
 			last_name "User"
 			verified false
 		end
+
+		factory :forgot_password_user do
+			password_reset_token SecureRandom.urlsafe_base64
+			password_reset_sent_at Time.zone.now
+		end
 	end
 end

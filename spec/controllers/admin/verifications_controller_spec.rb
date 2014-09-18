@@ -9,7 +9,7 @@ describe Admin::VerificationsController do
 		before { sign_in(user) }
 
   	it "cannot access the verify user action" do
-  		get :verify_user, :user_id => create(:user)
+  		get :new, :user_id => create(:user)
   		expect(response).to redirect_to(root_path)
   		expect(flash[:alert]).to eql("You must be an admin to do that.")
   	end
@@ -19,7 +19,7 @@ describe Admin::VerificationsController do
 		before { sign_in(faculty_user) }
 
 		it "cannot access the verify user action" do
-			get :verify_user, :user_id => create(:user)
+			get :new, :user_id => create(:user)
 			expect(response).to redirect_to(root_path)
 			expect(flash[:alert]).to eql("You must be an admin to do that.")
 		end
@@ -29,7 +29,7 @@ describe Admin::VerificationsController do
 		before { sign_in(admin_user) }
 
 		it "displays an error for a missing user" do
-			get :verify_user, user_id: "not-here"
+			get :new, user_id: "not-here"
 
 			expect(response).to redirect_to(admin_users_path)
 			message = "The user you were looking for could not be found."

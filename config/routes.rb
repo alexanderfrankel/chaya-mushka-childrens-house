@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 	post "/signin", to: "sessions#create"
 	delete "/signout", to: "sessions#destroy", as: "signout"
 
+	resources :password_resets, only: [:new, :create, :edit, :update]
+
 	resources :users, only: [:new, :create, :edit, :update, :show]
 	resources :events, only: [:index, :show]
 	resources :tuitions, only: :index
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
 		root :to => "base#index"
 		resources :posts, except: :index
 		resources :users do
-			get "/verify", to: "verifications#verify_user"
+			resources :verifications, only: :new
 		end
 		resources :events
 		resources :forms
