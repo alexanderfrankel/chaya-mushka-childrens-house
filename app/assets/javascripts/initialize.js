@@ -1,6 +1,5 @@
 var ready = function() {
   homepageCarousel();
-  navDropdown();
 };
 
 $(document).ready(ready);
