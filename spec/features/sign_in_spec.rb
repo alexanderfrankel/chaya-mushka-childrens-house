@@ -56,10 +56,4 @@ feature 'Signing In' do
 
 		expect(page).to have_content("Apologies. Your account has not yet been verified by the administrative office. Please wait for verification email.")
 	end
-
-	scenario "remember me" do
-	end
-
-	scenario "forgot password" do
-	end
 end

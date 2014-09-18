@@ -19,4 +19,22 @@ describe UserMailer do
 			email.body.should include(from)
 		end
  	end
+
+ 	context "Forgot Password" do
+ 		let!(:forgot_password_user) { create(:forgot_password_user) }
+ 		let!(:email) { UserMailer.password_reset(forgot_password_user) }
+
+ 		it "sends out an email with password reset instructions" do
+ 			email.to.should include(forgot_password_user.email)
+
+ 			subject = "Chaya Mushka Children's House Preschool Password Reset"
+ 			email.subject.should include(subject)
+
+ 			message = "To reset your password, click the link below."
+ 			email.body.should include(message)
+
+		 	from = "- The Chaya Mushka Children's House Preschoool Administrative Office"
+			email.body.should include(from)
+ 		end
+ 	end
 end
