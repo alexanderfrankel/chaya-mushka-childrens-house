@@ -2,9 +2,6 @@
 
 	<% if @tuition.errors.any? %>
 		<div id="error_explanation">
-			<h2><%= pluralize(@tuition.errors.count, "error") %>
-				prohibited this tuition information from being saved:</h2>
-
 			<ul>
 				<% @tuition.errors.full_messages.each do |msg| %>
 					<li><%= msg %></li>
