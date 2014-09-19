@@ -1,21 +1,27 @@
-.homepage-body {
-}
-
 #welcome-message {
 	font-family: 'Architects Daughter', cursive;
-	width: 64%;
+	width: 58%;
 	border-radius: 5px;
 	background: rgba(28, 43, 252, 0.8);
 	color: white;
 	text-align: center;
 	display: inline-block;
 	height: 350px;
-	margin-bottom: 30px;
+	padding: 3%;
+	margin-bottom: 40px;
+}
+
+#welcome-message h3 {
+	margin-top: 0px;
+}
+
+#welcome-message p{
+	font-size: 16px;
 }
 
 #upcoming-events {
 	font-family: 'Architects Daughter', cursive;
-	width: 34%;
+	width: 28%;
 	border-radius: 5px;
 	background: rgba(51, 204, 51, 0.75);
 	color: white;
@@ -23,5 +29,10 @@
 	display: inline-block;
 	float: right;
 	height: 350px;
-	margin-bottom: 30px;
+	padding: 3%;
+	margin-bottom: 40px;
+}
+
+#upcoming-events h3 {
+	margin-top: 0px;
 }
