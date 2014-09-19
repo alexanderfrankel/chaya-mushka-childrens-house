@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
 
 	def self.upcoming_events
 		date_range = Date.today..Date.today + 90.day
-		Event.where(:start_date => date_range)
+		Event.where(:start_date => date_range).limit(5)
 	end
 
 	def start_date_cannot_be_in_the_past

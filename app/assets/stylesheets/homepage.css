@@ -35,11 +35,6 @@
 	position: relative;
 }
 
-.upcoming-events-list {
-	height: 75%;
-	overflow: hidden;
-}
-
 #upcoming-events h3 {
 	margin-top: 0px;
 }
