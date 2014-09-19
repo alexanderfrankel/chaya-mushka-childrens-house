@@ -58,7 +58,8 @@
 
 .nav-items-main-list-item a {
 	color: #FFFFFF;
-	border: 1px solid white;
+	font-size: 16px;
+	/*border: 1px solid white;*/
 	border-radius: 5px;
 	padding: 4px 9px;
 }
@@ -106,7 +107,8 @@
 
 .nav-items-user-list li a {
 	color: #FFFFFF;
-	border: 1px solid white;
+	font-size: 16px;
+	/*border: 1px solid white;*/
 	border-radius: 5px;
 	padding: 4px 9px;
 }
