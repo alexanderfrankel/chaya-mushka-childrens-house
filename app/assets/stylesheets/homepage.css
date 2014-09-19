@@ -56,5 +56,25 @@
 	bottom: 17px;
 	left: 1px;
 	right: 1px;
-	margin: auto;
+	margin: 0 auto;
+}
+
+@media (max-width: 1180px) {
+
+	#welcome-message {
+		height: auto;
+		width: 80%;
+		padding-bottom: 40px;
+		margin: auto auto 40px auto;
+		display: block;
+	}
+
+	#upcoming-events {
+		height: auto;
+		width: 80%;
+		padding-bottom: 40px;
+		margin: auto auto 40px auto;
+		display: block;
+		float: none;
+	}
 }
