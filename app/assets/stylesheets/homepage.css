@@ -1,2 +1,27 @@
 .homepage-body {
 }
+
+#welcome-message {
+	font-family: 'Architects Daughter', cursive;
+	width: 64%;
+	border-radius: 5px;
+	background: rgba(28, 43, 252, 0.8);
+	color: white;
+	text-align: center;
+	display: inline-block;
+	height: 350px;
+	margin-bottom: 30px;
+}
+
+#upcoming-events {
+	font-family: 'Architects Daughter', cursive;
+	width: 34%;
+	border-radius: 5px;
+	background: rgba(51, 204, 51, 0.75);
+	color: white;
+	text-align: center;
+	display: inline-block;
+	float: right;
+	height: 350px;
+	margin-bottom: 30px;
+}
