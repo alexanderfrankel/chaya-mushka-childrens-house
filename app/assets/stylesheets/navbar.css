@@ -144,8 +144,39 @@
 		float: none;
 		margin: 0;
 	}
-
 }
+
+@media screen and (min-width : 767px) and (max-width: 980px) {
+	.all-nav {
+		height: 200px;
+	}
+
+	.nav-logo img {
+		float: none;
+		margin: 20px auto;
+	}
+
+	.nav-message {
+		font-size: 24px;
+	}
+
+	.nav-items-user {
+		display: block;
+		width: 100%;
+		height: 100%;
+		float: none;
+		margin: 0;
+	}
+
+	.btn-navbar {
+		width: 80%;
+		display: block;
+		margin: 40px auto 0 auto;
+		margin-bottom: 10px;
+	}
+}
+
+
 
 @media screen and (max-width : 767px) {
 	.all-nav {
@@ -202,9 +233,6 @@
 		display: block;
 		margin: 0 auto;
 		margin-bottom: 10px;
-	}
-
-	.icon-bar {
 	}
 
 }
