@@ -6,3 +6,26 @@ form input {
 	text-align: center;
 	width: 50%;
 }
+
+.forgot-pass-remember-me {
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+}
+
+.remember-me-label {
+	float: left;
+	margin-right: 5px;
+}
+
+.remember-me-checkbox {
+	float: left;
+}
+
+.forgot-password {
+	float: right;
+}
+
+.sign-in-btn {
+	margin-top: 30px;
+}
