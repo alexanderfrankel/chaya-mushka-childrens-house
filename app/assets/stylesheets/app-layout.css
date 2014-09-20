@@ -46,6 +46,10 @@ html, body {
 
 @media (max-width: 767px) {
 
+	.wrapper {
+		min-height: 290%;
+	}
+
 	.main-content {
 		width: 95%;
 		padding: 360px 0px 100px 0px;

@@ -65,3 +65,49 @@
 	list-style: none;
 }
 
+@media screen and (min-width : 767px) and (max-width: 1340px) {
+	.footer-content {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width : 767px) {
+
+	.all-footer {
+		height: 380px;
+	}
+
+	.footer-content {
+		width: 100%;
+	}
+
+	.footer-preschool-logo {
+		height: 30%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.footer-chabad-logo {
+		height: 20%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.footer-info {
+		height: 40%;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.contact-info, .address-info {
+		margin: 10px auto;
+		float: none;
+	}
+
+	.contact-info p, .address-info p {
+		text-align: center;
+	}
+
+}
+
+
