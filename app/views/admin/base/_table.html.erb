@@ -4,8 +4,7 @@
 		<tr>
 			<th>Date</th>
 			<th>Title</th>
-			<th>Content</th>
-			<th>User</th>
+			<th>Posted by:</th>
 		</tr>
 	</thead>
 
@@ -14,7 +13,6 @@
 			<tr>
 				<td><%= post.formatted_created_at %></td>
 				<td><%= link_to post.title, admin_post_path(post) %></td>
-				<td><%= post.content %></td>
 				<td><%= post.user %></td>
 			</tr>
 		<% end %>
