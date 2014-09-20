@@ -2,10 +2,10 @@ class Admin::UsersController < Admin::BaseController
 	before_action :set_user, only: [:show, :edit, :update, :destroy, :verify]
 
 	def index
-		@unverified_users = User.find_unverified
-		@admin_users = User.find_admin
-		@faculty_users = User.find_faculty
-		@parent_users = User.find_parent
+		@unverified_users = User.find_unverified.order(last_name: :asc)
+		@admin_users = User.find_admin.order(last_name: :asc)
+		@faculty_users = User.find_faculty.order(last_name: :asc)
+		@parent_users = User.find_parent.order(last_name: :asc)
 	end
 
 	def new

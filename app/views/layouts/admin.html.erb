@@ -25,7 +25,7 @@
 
 		<div class="main-content">
 			<%= render "layouts/flash" %>
-			<h1 class="top-header">Admin Lounge</h1>
+			<h1 class="admin-lounge-header">Admin Lounge</h1>
 
 			<blockquote>
 				<p>Welcome to Chaya Mushka's Admin Lounge. Please enjoy your stay!</p>
@@ -34,10 +34,10 @@
 
 			<div class="row-fluid">
 
-				<div class="span3">
+				<div class="span3 lounge-links">
 					<h3>Links</h3>
 
-					<ul id="admin-menu">
+					<ul class="admin-menu">
 						<li><%= link_to "Message Board", admin_root_path %></li>
 						<li><%= link_to "Users", admin_users_path %></li>
 						<li><%= link_to "News & Events", admin_events_path %></li>
@@ -46,7 +46,7 @@
 					</ul>
 				</div>
 
-				<div class="span9">
+				<div class="span9 lounge-content">
 					<%= yield %>
 				</div>
 			</div>
