@@ -1,5 +1,6 @@
 var ready = function() {
   homepageCarousel();
+  loungeInitialize();
 };
 
 $(document).ready(ready);
