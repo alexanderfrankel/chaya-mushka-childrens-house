@@ -7,6 +7,11 @@ class Event < ActiveRecord::Base
 
 	belongs_to :user
 
+	def self.upcoming_events
+		date_range = Date.today..Date.today + 90.day
+		Event.where(:start_date => date_range).limit(5)
+	end
+
 	def start_date_cannot_be_in_the_past
 		if start_date.present? && start_date < Date.today
 			errors.add(:start_date, "can't be in the past")
@@ -23,5 +28,13 @@ class Event < ActiveRecord::Base
 		if start_date.present? && end_date.present? && end_date < start_date
 			errors.add(:end_date, "must come after the Start Date")
 		end
+	end
+
+	def formatted_start_date
+		start_date.strftime("%b %d")
+	end
+
+	def formatted_end_date
+		end_date.strftime("%b %d")
 	end
 end

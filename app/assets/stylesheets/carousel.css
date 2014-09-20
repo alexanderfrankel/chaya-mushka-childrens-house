@@ -1,18 +1,19 @@
 .homepage-carousel {
-	height: 200px;
+	height: 167px;
 	/*border: 1px solid red;*/
+	margin-bottom: 30px;
 }
 
 .carousel-item {
-	height: 180px;
+	height: 147px;
 	margin: 10px 5px;
 	text-align: center;
 	/*border: 1px solid red;*/
 }
 
-.carousel-item h3 {
+/*.carousel-item h3 {
 	margin: 0;
 	height: 100%;
 	color: #FFFFFF;
-	background: #3300CC;
-}
+	background: rgba(51, 204, 51, 0.8);
+}*/

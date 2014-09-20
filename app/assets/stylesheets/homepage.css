@@ -1,2 +1,80 @@
-.homepage-body {
+#welcome-message {
+	font-family: 'Architects Daughter', cursive;
+	width: 60%;
+	border-radius: 5px;
+	background: rgba(28, 43, 252, 0.8);
+	color: white;
+	text-align: center;
+	display: inline-block;
+	height: 350px;
+	padding: 2%;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+#welcome-message h3 {
+	margin-top: 0px;
+}
+
+#welcome-message p{
+	font-size: 16px;
+}
+
+#upcoming-events {
+	font-family: 'Architects Daughter', cursive;
+	width: 29%;
+	border-radius: 5px;
+	background: rgba(51, 204, 51, 0.75);
+	color: white;
+	text-align: center;
+	display: inline-block;
+	float: right;
+	height: 350px;
+	padding: 2%;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+#upcoming-events h3 {
+	margin-top: 0px;
+}
+
+#upcoming-events ul {
+	list-style: none;
+	font-size: 16px;
+	margin-left: 0;
+}
+
+.horizontal-line {
+	height: 1px;
+	border: 1px solid white;
+	margin: 4px 0;
+}
+
+#more-info-btn, #full-calendar-btn {
+	position: absolute;
+	bottom: 17px;
+	left: 1px;
+	right: 1px;
+	margin: 0 auto;
+}
+
+@media (max-width: 1180px) {
+
+	#welcome-message {
+		height: auto;
+		width: 80%;
+		padding-bottom: 40px;
+		margin: auto auto 40px auto;
+		display: block;
+	}
+
+	#upcoming-events {
+		height: auto;
+		width: 80%;
+		padding-bottom: 40px;
+		margin: auto auto 40px auto;
+		display: block;
+		float: none;
+	}
 }

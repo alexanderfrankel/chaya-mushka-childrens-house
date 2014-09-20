@@ -1,14 +1,18 @@
 html, body {
-	background-image: url('/assets/linen.jpg');
+	/*background-image: url('/assets/bg.jpg');*/
 	background-size: 100%;
 	background-repeat: no-repeat;
 	/*background: #6666FF;*/
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	font-family: Consolas, monaco, monospace;
 }
 
 .wrapper {
+	/*background: rgba(28, 43, 252, 0.75);*/
+	/*background: rgba(51, 204, 51, 0.8);*/
+	background: rgba(255, 153, 0, 0.75);
 	min-height: 118%;
 	position: relative;
 }
@@ -21,6 +25,17 @@ html, body {
 	/*border: 1px solid red;*/
 }
 
+.top-header {
+	font-family: 'Architects Daughter', cursive;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.btn {
+	font-family: Consolas, monaco, monospace;
+	padding: 1px 10px;
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
 
 	.main-content {
@@ -31,8 +46,13 @@ html, body {
 
 @media (max-width: 767px) {
 
+	.wrapper {
+		min-height: 290%;
+	}
+
 	.main-content {
 		width: 95%;
+		padding: 360px 0px 100px 0px;
 	}
 
 }
