@@ -1,0 +1,10 @@
+.admin-lounge-header, .faculty-lounge-header {
+	font-family: 'Architects Daughter', cursive;
+}
+
+.admin-top-header, .faculty-lounge-header {
+	text-align: center;
+}
+
+.new-btn {
+}
