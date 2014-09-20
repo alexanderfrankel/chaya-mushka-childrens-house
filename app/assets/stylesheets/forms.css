@@ -7,18 +7,18 @@ form input {
 	width: 50%;
 }
 
-.forgot-pass-remember-me {
+.remember-me-forgot-pass {
 	width: 50%;
+	height: 50px;
 	margin: 0 auto;
-	display: block;
 }
 
-.remember-me-label {
+.remember-me label {
 	float: left;
 	margin-right: 5px;
 }
 
-.remember-me-checkbox {
+.remember-me input {
 	float: left;
 }
 
@@ -26,6 +26,24 @@ form input {
 	float: right;
 }
 
-.sign-in-btn {
-	margin-top: 30px;
+@media (max-width: 1180px) {
+
+	.remember-me-forgot-pass {
+		height: 80px;
+	}
+
+	.remember-me label {
+		float: none;
+		display: inline;
+		margin-right: 5px;
+	}
+
+	.remember-me input {
+		float: none;
+	}
+
+	.forgot-password {
+		float: none;
+		margin-top: 10px;
+	}
 }
