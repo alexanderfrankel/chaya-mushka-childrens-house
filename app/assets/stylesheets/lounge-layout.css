@@ -8,6 +8,7 @@
 	background: rgba(51, 204, 51, 0.75);
 	color: white;
 	text-align: center;
+	margin-bottom: 40px;
 }
 
 .admin-menu, .faculty-menu {
@@ -22,6 +23,7 @@
 	background: rgba(28, 43, 252, 0.8);
 	color: white;
 	text-align: center;
+	margin-bottom: 40px;
 }
 
 .admin-top-header, .faculty-lounge-header {
