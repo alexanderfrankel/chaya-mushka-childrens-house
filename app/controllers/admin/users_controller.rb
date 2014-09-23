@@ -6,6 +6,7 @@ class Admin::UsersController < Admin::BaseController
 		@admin_users = User.find_admin.order(last_name: :asc)
 		@faculty_users = User.find_faculty.order(last_name: :asc)
 		@parent_users = User.find_parent.order(last_name: :asc)
+		@inactive_users = User.find_inactive.order(last_name: :asc)
 	end
 
 	def new
@@ -62,6 +63,6 @@ class Admin::UsersController < Admin::BaseController
 	end
 
 	def user_params
-		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :shutterfly_url, :faculty, :admin)
+		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :shutterfly_url, :faculty, :admin, :active)
 	end
 end

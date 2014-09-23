@@ -60,4 +60,8 @@ class User < ActiveRecord::Base
 	def self.find_parent
 		User.where("faculty = ? AND verified = ?", false, true)
 	end
+
+	def self.find_inactive
+		User.where("active = ?", false)
+	end
 end

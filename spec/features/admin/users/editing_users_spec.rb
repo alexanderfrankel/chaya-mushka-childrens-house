@@ -47,4 +47,15 @@ feature "Editing a user" do
 			expect(page).to have_content("#{user.last_name}, #{user.first_name} (Faculty)")
 		end
 	end
+
+	scenario "Making a User Inactive" do
+		check "Active?"
+		click_button "Update User"
+
+		expect(page).to have_content("User has been updated.")
+
+		# within("#inactive_users") do
+		# 	expect(page).to have_content("#{user.last_name}, #{user.first_name}")
+		# end
+	end
 end
