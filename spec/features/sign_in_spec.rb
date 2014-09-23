@@ -56,4 +56,17 @@ feature 'Signing In' do
 
 		expect(page).to have_content("Apologies. Your account has not yet been verified by the administrative office. Please wait for verification email.")
 	end
+
+	scenario "An inactive user cannot login" do
+		user = create(:inactive_user)
+
+		visit '/'
+		click_link "Sign In"
+		fill_in 'Email', with: user.email
+		fill_in 'Password', with: user.password
+		click_button "Sign In"
+
+		expect(page).to have_content("Apologies. Your account is no longer active. Please contact the administrative office for assistance.")
+		expect(page).to_not have_content("Profile")
+	end
 end
