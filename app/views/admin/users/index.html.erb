@@ -29,3 +29,10 @@
 		<li><%= link_to user, [:admin, user] %></li>
 	<% end %>
 </ul>
+
+<h6>Inactive Users</h6>
+<ul id="inactive_users">
+	<% @inactive_users.each do |user| %>
+		<li><%= link_to user, [:admin, user] %></li>
+	<% end %>
+</ul>

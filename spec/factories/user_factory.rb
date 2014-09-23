@@ -32,5 +32,9 @@ FactoryGirl.define do
 			password_reset_token SecureRandom.urlsafe_base64
 			password_reset_sent_at Time.zone.now
 		end
+
+		factory :inactive_user do
+			active false
+		end
 	end
 end

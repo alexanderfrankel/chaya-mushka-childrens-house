@@ -11,7 +11,7 @@
 	margin-bottom: 40px;
 }
 
-.admin-menu, .faculty-menu {
+#admin-menu, #faculty-menu {
 	list-style: none;
 	margin: 0;
 	padding-bottom: 20px;
