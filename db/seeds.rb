@@ -31,6 +31,14 @@ unverified = User.create(first_name: "al",
 												 password_confirmation: "password",
 												 verified: false)
 
+inactive = User.create(first_name: "albert",
+											 last_name: "frabton",
+											 email: "albert@gmail.com",
+											 password: "password",
+											 password_confirmation: "password",
+											 verified: true,
+											 active: false)
+
 # POSTS -------------------------------------------
 
 post1 = Post.create(title: "Post 1",
