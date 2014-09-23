@@ -1,9 +1,7 @@
 <h3 class="admin-top-header"><%= @user %></h3>
 
-<%= link_to "Edit User", edit_admin_user_path(@user), class:"btn" %>
-
 <% if !@user.verified %>
 	<%= link_to "Verify User", new_admin_user_verification_path(@user), class:"btn btn-warning", data: { confirm: "Are you sure you want to verify this user?"} %>
 <% end %>
 
-<%= link_to "Delete User", admin_user_path(@user), method: :delete, data: { confirm: "Are you sure you want to delete this user?" }, class:"btn btn-danger" %>
+<%= link_to "Edit User", edit_admin_user_path(@user), class:"btn" %>
