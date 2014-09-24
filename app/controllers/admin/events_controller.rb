@@ -2,17 +2,7 @@ class Admin::EventsController < Admin::BaseController
 	before_action :set_event, only: [:show, :edit, :update, :destroy]
 
 	def index
-		calendar_event_data = []
-
-				Event.all.each do |event|
-					calendar_event_data << { id: event.id,
-																		title: event.title,
-																		description: event.description,
-																		start_date: event.start_date,
-																		end_date: event.end_date }
-				end
-
-				@calendar_event_data_json = calendar_event_data.to_json.html_safe
+		@events = Event.order(:start_date)
 	end
 
 	def new
