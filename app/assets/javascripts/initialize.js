@@ -1,6 +1,7 @@
 var ready = function() {
   homepageCarousel();
   loungeInitialize();
+  eventsCalendar();
 };
 
 $(document).ready(ready);

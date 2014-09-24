@@ -59,6 +59,7 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    fullcalendar-rails (1.6.4.0)
     gmail (0.4.0)
       gmail_xoauth (>= 0.3.0)
       mail (>= 2.2.1)
@@ -171,6 +172,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   email_spec (~> 1.6.0)
   factory_girl_rails (~> 4.2.1)
+  fullcalendar-rails (~> 1.6.4.0)
   gmail (~> 0.4.0)
   jbuilder (~> 2.0)
   jquery-rails
