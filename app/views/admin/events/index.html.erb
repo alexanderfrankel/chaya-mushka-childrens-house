@@ -1,11 +1,7 @@
 <h3 class="admin-top-header">News &amp; Events</h3>
 
-
 <%= link_to "Add Event", new_admin_event_path, class:"btn new-btn" %>
 
+<div class="calendar"></div>
 
-<ul id="events">
-	<% @events.each do |event| %>
-		<li><%= link_to event.title, [:admin, event] %></li>
-	<% end %>
-</ul>
+<script type="text/javascript">var calendarEventsData = <%= @calendar_event_data_json || '""'.html_safe %></script>

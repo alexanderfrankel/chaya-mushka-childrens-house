@@ -36,6 +36,8 @@ gem 'carrierwave', '0.8.0'
 
 gem 'mime', '0.3.0'
 
+gem 'fullcalendar-rails', '~> 1.6.4.0'
+
 group :test, :development do
 	gem 'rspec-rails', "~> 2.14"
 	gem 'gmail', "~> 0.4.0"

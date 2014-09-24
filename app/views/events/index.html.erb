@@ -1,7 +1,5 @@
 <h1 class="top-header">News &amp; Events</h1>
 
-<ul id="events">
-	<% @events.each do |event| %>
-		<li><%= link_to event.title, event %></li>
-	<% end %>
-</ul>
+<div class="calendar"></div>
+
+<script type="text/javascript">var calendarEventsData = <%= @calendar_event_data_json || '""'.html_safe %></script>
