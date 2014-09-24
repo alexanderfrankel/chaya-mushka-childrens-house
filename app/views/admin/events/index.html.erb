@@ -2,6 +2,8 @@
 
 <%= link_to "Add Event", new_admin_event_path, class:"btn new-btn" %>
 
-<div class="calendar"></div>
-
-<script type="text/javascript">var calendarEventsData = <%= @calendar_event_data_json || '""'.html_safe %></script>
+<ul id="events">
+	<% @events.each do |event| %>
+		<li><%= link_to event.title, [:admin, event] %></li>
+	<% end %>
+</ul>
