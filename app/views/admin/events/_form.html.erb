@@ -1,0 +1,39 @@
+<%= form_for [:admin, @event] do |f| %>
+
+	<% if @event.errors.any? %>
+		<div id="error_explanation">
+			<ul>
+				<% @event.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</p>
+
+	<p>
+		<%= f.label :start_date, "Start Date" %>
+		<%= f.datetime_local_field :start_date %>
+	</p>
+
+	<p>
+		<%= f.label :end_date, "End Date" %>
+		<%= f.datetime_local_field :end_date %>
+	</p>
+
+	<% if @event.new_record? %>
+		<%= f.submit "Add Event", class:"btn" %>
+	<% else %>
+		<%= f.submit "Update Event", class:"btn" %>
+	<% end %>
+<% end %>

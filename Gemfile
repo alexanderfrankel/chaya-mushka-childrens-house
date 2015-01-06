@@ -32,11 +32,19 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'cancan', '~> 1.6.10'
 
+gem 'carrierwave', '0.8.0'
+
+gem 'mime', '0.3.0'
+
+gem 'fullcalendar-rails', '~> 1.6.4.0'
+
 group :test, :development do
 	gem 'rspec-rails', "~> 2.14"
+	gem 'gmail', "~> 0.4.0"
 end
 
 group :test do
 	gem 'capybara', "2.1.0"
 	gem 'factory_girl_rails', '~> 4.2.1'
+	gem 'email_spec', '~> 1.6.0'
 end

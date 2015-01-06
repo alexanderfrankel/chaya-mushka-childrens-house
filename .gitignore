@@ -11,3 +11,12 @@
 
 # Ignore secrets.yml
 /config/secrets.yml
+
+#Ignore publicly uploaded files
+public/uploads
+
+#Ignore TODO
+TODO
+
+#Ignore Mailer config
+config/initializers/mail.rb

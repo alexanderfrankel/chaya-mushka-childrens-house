@@ -1,0 +1,38 @@
+<h3 class="admin-top-header">Users</h3>
+
+<%= link_to "New User", new_admin_user_path, class:"btn new-btn" %>
+
+<h6>Unverified Users</h6>
+<ul id="unverified_users">
+	<% @unverified_users.each do |user| %>
+		<li><%= link_to user, [:admin, user] %></li>
+	<% end %>
+</ul>
+
+<h6>Admin Users</h6>
+<ul id="admin_users">
+	<% @admin_users.each do |user| %>
+		<li><%= link_to user, [:admin, user] %></li>
+	<% end %>
+</ul>
+
+<h6>Faculty Users</h6>
+<ul id="faculty_users">
+	<% @faculty_users.each do |user| %>
+		<li><%= link_to user, [:admin, user] %></li>
+	<% end %>
+</ul>
+
+<h6>Parent Users</h6>
+<ul id="users">
+	<% @parent_users.each do |user| %>
+		<li><%= link_to user, [:admin, user] %></li>
+	<% end %>
+</ul>
+
+<h6>Inactive Users</h6>
+<ul id="inactive_users">
+	<% @inactive_users.each do |user| %>
+		<li><%= link_to user, [:admin, user] %></li>
+	<% end %>
+</ul>

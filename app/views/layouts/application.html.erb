@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ChayaMushka</title>
+  <title>Chaya Mushka</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<%= yield %>
+	<div class="wrapper">
+
+		<div class="all-nav">
+			<%= render "layouts/navbar" %>
+		</div>
+
+		<div class="main-content">
+			<%= render "layouts/flash" %>
+			<%= yield %>
+		</div>
+
+		<div class="all-footer">
+			<%= render "layouts/footer" %>
+		</div>
+
+	</div>
 
 </body>
 </html>

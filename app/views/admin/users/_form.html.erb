@@ -1,0 +1,55 @@
+<%= form_for [:admin, @user] do |f| %>
+
+	<% if @user.errors.any? %>
+		<div id="error_explanation">
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= f.label :first_name, "First Name" %>
+		<%= f.text_field :first_name %>
+	</p>
+
+	<p>
+		<%= f.label :last_name, "Last Name" %>
+		<%= f.text_field :last_name %>
+	</p>
+
+	<p>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</p>
+
+	<p>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</p>
+
+	<p>
+		<%= f.label :password_confirmation, "Password Confirmation" %>
+		<%= f.password_field :password_confirmation %>
+	</p>
+
+	<p>
+		<%= f.check_box :faculty %>
+		<%= f.label :faculty, "Faculty?" %>
+	</p>
+
+	<p>
+		<%= f.check_box :admin %>
+		<%= f.label :admin, "Admin?" %>
+	</p>
+
+	<p>
+		<%= f.check_box :active %>
+		<%= f.label :active, "Active?" %>
+	</p>
+
+	<%= f.submit class:"btn" %>
+
+<% end %>

@@ -1,0 +1,34 @@
+<%= form_for [:admin, @tuition] do |f| %>
+
+	<% if @tuition.errors.any? %>
+		<div id="error_explanation">
+			<ul>
+				<% @tuition.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= f.label :year %>
+		<%= f.text_field :year %>
+	</p>
+
+	<p>
+		<%= f.label :amount %>
+		$<%= f.text_field :amount %>
+	</p>
+
+	<p>
+		<%= f.check_box :current %>
+		<%= f.label :current, "Current?" %>
+	</p>
+
+	<% if @tuition.new_record? %>
+		<%= f.submit "Save", class:"btn" %>
+	<% else %>
+		<%= f.submit "Update", class:"btn" %>
+	<% end %>
+
+<% end %>

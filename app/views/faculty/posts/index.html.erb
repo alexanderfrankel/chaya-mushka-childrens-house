@@ -1,0 +1,9 @@
+<h3 class="faculty-top-header">Posts</h3>
+
+<%= link_to "New Post", new_faculty_post_path, class:"btn new-btn" %>
+
+<ul>
+	<% @posts.each do |post| %>
+		<li><%= link_to post.title, [:faculty, post] %></li>
+	<% end %>
+</ul>

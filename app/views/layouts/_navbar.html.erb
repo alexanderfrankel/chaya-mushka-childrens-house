@@ -1,0 +1,100 @@
+<div class="nav-logo">
+	<a href="/"><%= image_tag("preschool_logo.png", size:"110") %></a>
+</div>
+
+<div class="nav-items-main">
+	<div class="nav-message">Chaya Mushka Children's House Preschool</div>
+
+	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+  </a>
+
+
+	<ul class="nav-items-main-list nav-collapse collapse">
+		<li class="dropdown nav-items-main-list-item">
+		  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover CMCH Preschool</a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		    <li><a tabindex="-1" href="#">Director's Message</a></li>
+		    <li><a tabindex="-1" href="#">Mission &amp; History</a></li>
+				<li><%= link_to "Faculty & Staff", staff_index_path, tabindex:"-1" %></li>
+		    <li><%= link_to "News & Events", events_path, tabindex:"-1" %></li>
+		    <li><a tabindex="-1" href="#">Contact Us</a></li>
+		  </ul>
+		</li>
+
+		<li class="dropdown nav-items-main-list-item">
+		  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admissions</a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		    <li><a tabindex="-1" href="#">Visit the School</a></li>
+		    <li><a tabindex="-1" href="#">Applying</a></li>
+				<li><%= link_to "Tuition Information", tuitions_path, tabindex:"-1" %></li>
+		    <li><a tabindex="-1" href="#">Financial Aid</a></li>
+		  </ul>
+		</li>
+
+		<li class="dropdown nav-items-main-list-item">
+		  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		    <li><a tabindex="-1" href="#">Judaics</a></li>
+		    <li><a tabindex="-1" href="#">Montessori</a></li>
+		  </ul>
+		</li>
+
+		<li class="dropdown nav-items-main-list-item">
+		  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Support CMCH Preschool</a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		    <li><a tabindex="-1" href="http://www.aleffund.org/">Alef Fund</a></li>
+		    <li><a tabindex="-1" href="#">Ways To Give</a></li>
+		    <li><a tabindex="-1" href="#">Donate Online</a></li>
+		    <li><a tabindex="-1" href="#">Volunteer</a></li>
+		    <li><a tabindex="-1" href="#">PTA</a></li>
+		    <li><a tabindex="-1" href="#">Grandparents</a></li>
+		    <li><a tabindex="-1" href="#">Alumni</a></li>
+		  </ul>
+		</li>
+
+		<li class="dropdown nav-items-main-list-item">
+		  <a class="dropdown-toggle" data-toggle="dropdown" href="#">My CMCH</a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		  	<li><%= link_to "Forms", forms_path, tabindex:"-1" %></li>
+		  	<li><%= link_to "Log In", signin_path, tabindex:"-1" %></li>
+		  </ul>
+		</li>
+
+		<li class="dropdown nav-items-main-list-item">
+		  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Links</a>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		    <li><a tabindex="-1" href="#">CMCH Elementary</a></li>
+		    <li><a tabindex="-1" href="#">CMCH Summer Camp</a></li>
+		    <li><a tabindex="-1" href="#">Chabad of Georgia</a></li>
+		    <li><a tabindex="-1" href="http://www.shutterfly.com">Shutterfly</a></li>
+		  </ul>
+		</li>
+	</ul>
+</div>
+
+
+<div class="nav-items-user">
+	<ul class="nav-items-user-list">
+		<% if current_user %>
+
+			<% faculty_only do %>
+				<li><%= link_to "Faculty", faculty_root_path %></li>
+			<% end %>
+
+			<% admins_only do %>
+				<li><%= link_to "Admin", admin_root_path %></li>
+			<% end %>
+
+			<li><%= link_to "Profile", user_path(current_user) %></li>
+			<li><%= link_to "Sign Out", signout_path, method: :delete %></li>
+
+		<% else %>
+
+			<li><%= link_to "Sign In", signin_path %></li>
+			<li><%= link_to "Sign Up", new_user_path %></li>
+		<% end %>
+	</ul>
+</div>

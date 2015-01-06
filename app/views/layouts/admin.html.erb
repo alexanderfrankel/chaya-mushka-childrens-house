@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chaya Mushka</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<% flash.each do |type, message| %>
+			<div class="flash" id="<%= type %>">
+				<%= message %>
+			</div>
+		<% end %>
+
+
+		<div class="all-nav">
+			<%= render "layouts/navbar" %>
+		</div>
+
+
+		<div class="main-content">
+			<%= render "layouts/flash" %>
+			<h1 class="admin-lounge-header">Admin Lounge</h1>
+
+			<blockquote>
+				<p>Welcome to Chaya Mushka's Admin Lounge. Please enjoy your stay!</p>
+				<small>The Administrative Office</small>
+			</blockquote>
+
+			<div class="row-fluid">
+
+				<div class="span3 lounge-links">
+					<h3>Links</h3>
+
+					<ul id="admin-menu">
+						<li><%= link_to "Message Board", admin_root_path %></li>
+						<li><%= link_to "Users", admin_users_path %></li>
+						<li><%= link_to "News & Events", admin_events_path %></li>
+						<li><%= link_to "Tuition", admin_tuitions_path %></li>
+						<li><%= link_to "Forms", admin_forms_path %></li>
+					</ul>
+				</div>
+
+				<div class="span9 lounge-content">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+
+		<div class="all-footer">
+			<%= render "layouts/footer" %>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<h3 class="admin-top-header">Tuition</h3>
+
+<%= link_to "Add Tuition Year", new_admin_tuition_path, class:"btn new-btn" %>
+
+<ul id="tuitions">
+	<% @tuitions.each do |tuition| %>
+		<li><%= link_to tuition, [:admin, tuition] %></li>
+	<% end %>
+</ul>

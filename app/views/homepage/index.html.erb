@@ -1,0 +1,40 @@
+<div class="homepage-carousel">
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0040.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0041.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0459.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0471.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0477.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0482.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0497.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0502.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0503.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0539.jpg") %></div>
+  <div class="carousel-item"><%= image_tag("carousel_images/DSC_0576.jpg") %></div>
+</div>
+
+<div id="welcome-message">
+	<h3>Welcome to the Chaya Mushka Children's House Preschool!</h3>
+	<p>
+		Chaya Mushka Children's House seeks to create a stimulating and enriching educational environment for each and every child. The school is devoted to helping children learn socialization skills, building their self-confidence and teaching them the preliminary skills to explore andexperience the world independently.<br><br>
+
+		In addition, we seek to ignite a spark in each child to lay claim to his Jewish heritage and commit him or her to a lifetime passion for learning.<br><br>
+	</p>
+	<div id="more-info-btn"><%= link_to "More Information", "/", class:"btn" %></div>
+</div>
+
+<div id="upcoming-events">
+	<h3>Upcoming Events</h3>
+
+	<ul>
+		<div class="horizontal-line"></div>
+		<% @upcoming_events.each do |event| %>
+			<li>
+				<%= event.formatted_start_date %> - <%= event.formatted_end_date %><br>
+				<%= link_to event.title, event_path(event) %>
+				<div class="horizontal-line"></div>
+			</li>
+		<% end %>
+	</ul>
+
+	<div id="full-calendar-btn"><%= link_to "Full Calendar", events_path, class:"btn" %></div>
+</div>

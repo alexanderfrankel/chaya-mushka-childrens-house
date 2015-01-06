@@ -1,0 +1,25 @@
+<%= form_for [:admin, @post] do |f| %>
+
+	<% if @post.errors.any? %>
+		<div id="error_explanation">
+			<ul>
+				<% @post.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :content %>
+		<%= f.text_area :content %>
+	</p>
+
+	<%= f.submit class:"btn" %>
+<% end %>

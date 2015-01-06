@@ -1,0 +1,9 @@
+<h3 class="admin-top-header">Forms</h3>
+
+<%= link_to "New Form", new_admin_form_path, class:"btn new-btn" %>
+
+<ul id="forms">
+	<% @forms.each do |form| %>
+		<li><%= link_to form.title, [:admin, form] %></li>
+	<% end %>
+</ul>
